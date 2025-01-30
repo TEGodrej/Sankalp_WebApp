@@ -13,18 +13,18 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToSeeWeightScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getWeight().click();
+			dashboardpage.getWeight().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getWeight().click();
+			dashboardpage.getWeight().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//canvas[@class='am5-layer-30'])[1]"));
 		if(chart.isDisplayed()) {
@@ -36,18 +36,18 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeShipperScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getShipper().click();
+			dashboardpage.getShipper().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getShipper().click();
+			dashboardpage.getShipper().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//canvas[@class='am5-layer-30'])[1]"));
 		if(chart.isDisplayed()) {
@@ -59,18 +59,18 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeValueScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//canvas[@class='am5-layer-30'])[1]"));
 		if(chart.isDisplayed()) {

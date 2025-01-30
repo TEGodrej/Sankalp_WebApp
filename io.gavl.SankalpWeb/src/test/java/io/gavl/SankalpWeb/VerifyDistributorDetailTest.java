@@ -15,27 +15,27 @@ import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetails() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String distributorId="2016243";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getFdistributor().click();
-		dbp.getFilterSearchBox().sendKeys(distributorId);
+		dashboardpage.getFdistributor().click();
+		dashboardpage.getFilterSearchBox().sendKeys(distributorId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getDistributorName().click();
+		dashboardpage.getDistributorName().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopPerformerChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopPerformerChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[3]"));
 		
@@ -46,27 +46,27 @@ public class VerifyDistributorDetailTest extends BaseClass{
 	
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetailsByName() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String distributorName="A ONE KRUSHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getFdistributor().click();
-		dbp.getFilterSearchBox().sendKeys(distributorName);
+		dashboardpage.getFdistributor().click();
+		dashboardpage.getFilterSearchBox().sendKeys(distributorName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getDistributroId().click();
+		dashboardpage.getDistributroId().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopPerformerChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopPerformerChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[3]"));
 		

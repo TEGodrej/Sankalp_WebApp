@@ -1,7 +1,6 @@
 package io.gavl.SankalpWeb;
 
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
 
@@ -16,27 +15,27 @@ public class VerifyPdDetailTest extends BaseClass{
 
 	@Test
 	public void  verifyUserAbleToFetchPdDetails() throws InterruptedException{
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String pdId="4563255";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfPD().click();
-		dbp.getFilterSearchBox().sendKeys(pdId);
+		dashboardpage.getfPD().click();
+		dashboardpage.getFilterSearchBox().sendKeys(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getPdName().click();
+		dashboardpage.getPdName().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		
@@ -46,27 +45,27 @@ public class VerifyPdDetailTest extends BaseClass{
 	
 	@Test
 	public void  verifyUserAbleToFetchPdDetailsByName() throws InterruptedException{
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String pdName="ABC farm supply";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfPD().click();
-		dbp.getFilterSearchBox().sendKeys(pdName);
+		dashboardpage.getfPD().click();
+		dashboardpage.getFilterSearchBox().sendKeys(pdName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getPdId().click();
+		dashboardpage.getPdId().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		

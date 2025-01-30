@@ -9,16 +9,16 @@ import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 /*
- * 
+ * @ author testing.engineer
  */
 public class VerifyPeriodFunctionalityTest extends BaseClass {
 
 
 	@Test
 	public void verifyUserAbleToViewPeriodWithThisMonthOption() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -27,10 +27,10 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 			period.click();
 		}
 		try {
-			dbp.getThismonth().click();
+			dashboardpage.getThismonth().click();
 		}catch(ElementClickInterceptedException e) 
 		{
-			dbp.getThismonth().click();
+			dashboardpage.getThismonth().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
 		
@@ -45,9 +45,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithThisYearOption() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -56,9 +56,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 			period.click();
 		}
 		try {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 			System.out.println("Element is clicked");
 		}
 		WebElement chart=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
@@ -74,9 +74,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithPreviousYearOption() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -85,9 +85,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 			period.click();
 		}
 		try {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
 		if(chart.isDisplayed()) {
@@ -101,9 +101,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeriodWithTodayOption() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -112,9 +112,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 			period.click();
 		}
 		try {
-			dbp.getToday().click();
+			dashboardpage.getToday().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getToday().click();
+			dashboardpage.getToday().click();
 		}
 		WebElement chart=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
 		if(chart.isDisplayed()) {

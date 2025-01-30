@@ -13,22 +13,22 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyCustomerTypeAsDistributor() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfCustomerType().click();
+		dashboardpage.getfCustomerType().click();
 		
 		WebElement distributor=driver.findElement(By.xpath("//span[text()='Distributor']"));
 		distributor.click();
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		WebElement  topPerformer=driver.findElement(By.xpath("//h5[text()='Top performers - Placement']"));
-		dutil.scrollIntoView(topPerformer);
+		driverutility.scrollIntoView(topPerformer);
 		
 		WebElement chart=driver.findElement(By.xpath("//div[@id=\"dvTopPlacementPerformersChart\"]"));
 		assertTrue(chart.isDisplayed(), "displayed");
@@ -36,20 +36,20 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyCustomerTypeAsRetaier() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfCustomerType().click();
+		dashboardpage.getfCustomerType().click();
 		
 		WebElement retailer=driver.findElement(By.xpath("//span[text()='Retailer']"));
 		retailer.click();
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 //		WebElement  topPerformer=driver.findElement(By.xpath("//h5[text()='Top performers - Placement']"));
 		
 		

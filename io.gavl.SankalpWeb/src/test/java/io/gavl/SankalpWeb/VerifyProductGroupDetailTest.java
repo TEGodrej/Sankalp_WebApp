@@ -15,27 +15,27 @@ public class VerifyProductGroupDetailTest extends BaseClass{
 
 	@Test
 	public void verifyProductGroupDetailByName() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String productName="MARKETING BUSHI WP POWDER";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfProductGroup().click();
-		dbp.getFilterSearchBox().sendKeys(productName);
+		dashboardpage.getfProductGroup().click();
+		dashboardpage.getFilterSearchBox().sendKeys(productName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getProductGroupId().click();
+		dashboardpage.getProductGroupId().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		
@@ -45,27 +45,27 @@ public class VerifyProductGroupDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyProductGroupDetailByCode() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String productId="CPB - CO";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfProductGroup().click();
-		dbp.getFilterSearchBox().sendKeys(productId);
+		dashboardpage.getfProductGroup().click();
+		dashboardpage.getFilterSearchBox().sendKeys(productId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getProductGroupName().click();
+		dashboardpage.getProductGroupName().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		

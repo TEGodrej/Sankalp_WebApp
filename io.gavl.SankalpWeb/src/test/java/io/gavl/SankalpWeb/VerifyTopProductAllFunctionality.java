@@ -13,10 +13,10 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToSeeTodayPeriodThroughAllSelect() {
-//		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -26,19 +26,19 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getToday().click();
+			dashboardpage.getToday().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getToday().click();
+			dashboardpage.getToday().click();
 		}
-		WebElement allTab=dbp.getProductAll();
-		dutil.WaitToClick(5, allTab);
+		WebElement allTab=dashboardpage.getProductAll();
+		driverutility.WaitToClick(5, allTab);
 		allTab.click();
 //		WebElement table=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()='Product group']"));
 		WebElement prodName=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 //		if(table.isDisplayed()) {
 //			assertTrue(true);
 //		}
-		dutil.WaitTovisibility(prodName, 10);
+		driverutility.WaitTovisibility(prodName, 10);
 		 if(!prodName.isDisplayed()) {
 			assertTrue(false);
 		}
@@ -50,9 +50,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeThisMonthPeriodThroughAllselect() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		
@@ -62,9 +62,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getThismonth().click();
+			dashboardpage.getThismonth().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getThismonth().click();
+			dashboardpage.getThismonth().click();
 		}
 //		WebElement allTab=dbp.getProductAll();
 //		dutil.WaitToClick(5, allTab);
@@ -83,10 +83,10 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeThisYearPeriodThroughAllselect() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
-		dbp.getProductAll().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
+		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -95,9 +95,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 		}
 		WebElement table=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
 		if(table.isDisplayed()) {
@@ -109,10 +109,10 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeePreviousYearPeriodThroughAllselect() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
-		dbp.getProductAll().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
+		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -121,9 +121,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}
 		WebElement table=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
 		if(table.isDisplayed()) {

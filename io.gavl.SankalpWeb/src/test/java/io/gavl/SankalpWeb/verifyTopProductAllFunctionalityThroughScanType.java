@@ -14,9 +14,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughWeightScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -25,22 +25,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				period.click();
 			}
 			try {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}
 			try {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}
 			try {
-				dbp.getWeight().click();
+				dashboardpage.getWeight().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getWeight().click();
+				dashboardpage.getWeight().click();
 			}
-			WebElement allTab=dbp.getProductAll();
-			dutil.WaitToClick(5, allTab);
+			WebElement allTab=dashboardpage.getProductAll();
+			driverutility.WaitToClick(5, allTab);
 			allTab.click();
 			Assertion asser = new Assertion();
 			WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
@@ -53,9 +53,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughShipperScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -64,22 +64,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				period.click();
 			}
 			try {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}
 			try {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}
 			try {
-				dbp.getShipper().click();
+				dashboardpage.getShipper().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getShipper().click();
+				dashboardpage.getShipper().click();
 			}
-			WebElement allTab=dbp.getProductAll();
-			dutil.WaitToClick(5, allTab);
+			WebElement allTab=dashboardpage.getProductAll();
+			driverutility.WaitToClick(5, allTab);
 			allTab.click();
 			WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 			if(product.isDisplayed()) {
@@ -91,9 +91,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughValueScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -102,22 +102,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				period.click();
 			}
 			try {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getThismonth().click();
+				dashboardpage.getThismonth().click();
 			}
 			try {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}
 			try {
-				dbp.getValue().click();
+				dashboardpage.getValue().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getValue().click();
+				dashboardpage.getValue().click();
 			}
-			WebElement allTab=dbp.getProductAll();
-			dutil.WaitToClick(5, allTab);
+			WebElement allTab=dashboardpage.getProductAll();
+			driverutility.WaitToClick(5, allTab);
 			allTab.click();
 			WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 			if(product.isDisplayed()) {
@@ -128,9 +128,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	}
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughWeightScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -139,22 +139,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				period.click();
 			}
 			try {
-				dbp.getThisYr().click();
+				dashboardpage.getThisYr().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getThisYr().click();
+				dashboardpage.getThisYr().click();
 			}
 			try {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}
 			try {
-				dbp.getWeight().click();
+				dashboardpage.getWeight().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getWeight().click();
+				dashboardpage.getWeight().click();
 			}
-			WebElement allTab=dbp.getProductAll();
-			dutil.WaitToClick(5, allTab);
+			WebElement allTab=dashboardpage.getProductAll();
+			driverutility.WaitToClick(5, allTab);
 			allTab.click();
 			WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 			if(product.isDisplayed()) {
@@ -166,9 +166,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughShipperScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -177,22 +177,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				period.click();
 			}
 			try {
-				dbp.getThisYr().click();
+				dashboardpage.getThisYr().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getThisYr().click();
+				dashboardpage.getThisYr().click();
 			}
 			try {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getScanTypeDnArrow().click();
+				dashboardpage.getScanTypeDnArrow().click();
 			}
 			try {
-				dbp.getShipper().click();
+				dashboardpage.getShipper().click();
 			}catch(ElementClickInterceptedException e) {
-				dbp.getShipper().click();
+				dashboardpage.getShipper().click();
 			}
-			WebElement allTab=dbp.getProductAll();
-			dutil.WaitToClick(5, allTab);
+			WebElement allTab=dashboardpage.getProductAll();
+			driverutility.WaitToClick(5, allTab);
 			allTab.click();
 			WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 			if(product.isDisplayed()) {
@@ -204,9 +204,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughValueScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -215,22 +215,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getThisYr().click();
+			dashboardpage.getThisYr().click();
 		}
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}
-		WebElement allTab=dbp.getProductAll();
-		dutil.WaitToClick(5, allTab);
+		WebElement allTab=dashboardpage.getProductAll();
+		driverutility.WaitToClick(5, allTab);
 		allTab.click();
 		
 		WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
@@ -243,9 +243,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughWeightScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -254,22 +254,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getWeight().click();
+			dashboardpage.getWeight().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getWeight().click();
+			dashboardpage.getWeight().click();
 		}
-		WebElement allTab=dbp.getProductAll();
-		dutil.WaitToClick(5, allTab);
+		WebElement allTab=dashboardpage.getProductAll();
+		driverutility.WaitToClick(5, allTab);
 		allTab.click();
 		WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 		if(product.isDisplayed()) {
@@ -281,9 +281,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughShipperScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -292,22 +292,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getShipper().click();
+			dashboardpage.getShipper().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getShipper().click();
+			dashboardpage.getShipper().click();
 		}
-		WebElement allTab=dbp.getProductAll();
-		dutil.WaitToClick(5, allTab);
+		WebElement allTab=dashboardpage.getProductAll();
+		driverutility.WaitToClick(5, allTab);
 		allTab.click();
 		WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 		if(product.isDisplayed()) {
@@ -320,9 +320,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughValueScanType() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -331,22 +331,22 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			period.click();
 		}
 		try {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getPreviousYear().click();
+			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getScanTypeDnArrow().click();
+			dashboardpage.getScanTypeDnArrow().click();
 		}
 		try {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}catch(ElementClickInterceptedException e) {
-			dbp.getValue().click();
+			dashboardpage.getValue().click();
 		}
-		WebElement allTab=dbp.getProductAll();
-		dutil.WaitToClick(5, allTab);
+		WebElement allTab=dashboardpage.getProductAll();
+		driverutility.WaitToClick(5, allTab);
 		allTab.click();
 		WebElement product=driver.findElement(By.xpath("//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 		if(product.isDisplayed()) {

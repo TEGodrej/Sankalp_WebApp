@@ -16,19 +16,19 @@ public class VerifyFilterFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToFecthDistributor()   {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-		dbp.getFilterOptiopn().click();
+		dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfCustomerType().click();
-		dbp.getFilterSearchBox().sendKeys("Retailer");
+		dashboardpage.getfCustomerType().click();
+		dashboardpage.getFilterSearchBox().sendKeys("Retailer");
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		
 		WebElement chart=driver.findElement(By.xpath("(//canvas[@class='am5-layer-30'])[1]"));
 		if(chart.isDisplayed()) {
@@ -40,18 +40,18 @@ public class VerifyFilterFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToFetchRetailerDetails() {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfRetailer().click();
-		dbp.getFilterSearchBox().sendKeys("Testing kiran store");
-		dbp.getApplyBtn().click();
+		dashboardpage.getfRetailer().click();
+		dashboardpage.getFilterSearchBox().sendKeys("Testing kiran store");
+		dashboardpage.getApplyBtn().click();
 		WebElement TPliquid=driver.findElement(By.xpath("//h5[text()='Top performers - Liquidation']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", TPliquid);
@@ -66,17 +66,17 @@ public class VerifyFilterFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleTofetchRetailerDetailsUsingCode() {
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfRetailer().click();
-		dbp.getFilterSearchBox().sendKeys("7517658");
-		dbp.getApplyBtn().click();
+		dashboardpage.getfRetailer().click();
+		dashboardpage.getFilterSearchBox().sendKeys("7517658");
+		dashboardpage.getApplyBtn().click();
 		WebElement TPliquid=driver.findElement(By.xpath("//h5[text()='Top performers - Liquidation']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", TPliquid);

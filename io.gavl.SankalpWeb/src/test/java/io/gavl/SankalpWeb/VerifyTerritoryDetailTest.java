@@ -15,30 +15,30 @@ public class VerifyTerritoryDetailTest extends BaseClass{
 
 	@Test
 	public void verifyTerritoryDetailByName() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 //		String TerritoryName="AKOLA";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfTerritory().click();
+		dashboardpage.getfTerritory().click();
 //		dbp.getFilterSearchBox().sendKeys(TerritoryName);
 		Thread.sleep(Duration.ofSeconds(10));
 		try {
-		dbp.getTerritoryName().click();
+			dashboardpage.getTerritoryName().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getTerritoryName().click();
+			dashboardpage.getTerritoryName().click();
 		}
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		

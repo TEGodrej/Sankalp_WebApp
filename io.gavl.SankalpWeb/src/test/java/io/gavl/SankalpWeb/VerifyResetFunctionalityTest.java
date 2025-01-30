@@ -11,19 +11,19 @@ public class VerifyResetFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUseAbleToResetTheFilterCondition() {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
-		dbp.getfRetailer().click();
-		dbp.getFilterSearchBox().sendKeys("7517658");
+		dashboardpage.getfRetailer().click();
+		dashboardpage.getFilterSearchBox().sendKeys("7517658");
 		
-		dbp.getResetBtn().click();
+		dashboardpage.getResetBtn().click();
 		
 		
 	}

@@ -15,19 +15,19 @@ public class VerifyCloseFunctonalityTest extends BaseClass{
  
 	@Test
 	public void verifyUserAbleToCloseThefilter() {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();	
+			dashboardpage.getFilterOptiopn().click();	
 			
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();	
+			dashboardpage.getFilterOptiopn().click();	
 			
 			}
 		
-		dbp.getCloseBtn().click();
+		dashboardpage.getCloseBtn().click();
 		WebElement dashBoardTitle=driver.findElement(By.xpath("//span[text()='Dashboard']"));
 		if(dashBoardTitle.isDisplayed()) {
 			assertTrue(true);

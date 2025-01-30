@@ -12,9 +12,9 @@ public class VerifyLoginFuntionalityTest extends BaseClass{
 
 	@Test
 	public void verifyuserAbleToLoginWithValidCredential() {
-	lp.getUsernameTxtFld().sendKeys("demouser");
-	lp.getPasswordTxtfld().sendKeys("demouser");
-	lp.getLoginBtn().click();
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 	WebElement dbTitle=driver.findElement(By.xpath("//span[text()='Dashboard']"));
 	if(dbTitle.isDisplayed()) {
 		assertTrue(true);

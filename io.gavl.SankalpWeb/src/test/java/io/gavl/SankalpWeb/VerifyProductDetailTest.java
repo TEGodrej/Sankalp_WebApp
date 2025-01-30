@@ -15,27 +15,27 @@ public class VerifyProductDetailTest extends BaseClass{
 
 	@Test
 	public void verifyProductDetailByName() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String pdId="28100002";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfProduct().click();
-		dbp.getFilterSearchBox().sendKeys(pdId);
+		dashboardpage.getfProduct().click();
+		dashboardpage.getFilterSearchBox().sendKeys(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getProductName().click();
+		dashboardpage.getProductName().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		
@@ -45,27 +45,27 @@ public class VerifyProductDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyProductDetailByCode() throws InterruptedException {
-		dutil.implicitlyWait(10);
-		lp.getUsernameTxtFld().sendKeys("demouser");
-		lp.getPasswordTxtfld().sendKeys("demouser");
-		lp.getLoginBtn().click();
+		driverutility.implicitlyWait(10);
+		loginpage.getUsernameTxtFld().sendKeys("demouser");
+		loginpage.getPasswordTxtfld().sendKeys("demouser");
+		loginpage.getLoginBtn().click();
 		try {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
-			dbp.getFilterOptiopn().click();
+			dashboardpage.getFilterOptiopn().click();
 		}
 		String pdId="VIKAS ORGANIC MANURE 50 KG";
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getfProduct().click();
-		dbp.getFilterSearchBox().sendKeys(pdId);
+		dashboardpage.getfProduct().click();
+		dashboardpage.getFilterSearchBox().sendKeys(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dbp.getProductId().click();
+		dashboardpage.getProductId().click();
 		
 		
-		dbp.getApplyBtn().click();
+		dashboardpage.getApplyBtn().click();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dbp.getTopProductChart();
-		dutil.scrollIntoView(chart);
+		WebElement chart=  dashboardpage.getTopProductChart();
+		driverutility.scrollIntoView(chart);
 		
 		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
 		
