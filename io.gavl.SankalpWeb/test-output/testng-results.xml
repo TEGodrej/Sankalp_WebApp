@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-28T19:02:35 IST" name="Default suite" finished-at="2025-01-28T19:02:51 IST" duration-ms="16147">
+    <groups>
+    </groups>
+    <test started-at="2025-01-28T19:02:35 IST" name="Default test" finished-at="2025-01-28T19:02:51 IST" duration-ms="16147">
+      <class name="io.gavl.SankalpWeb.VerifyCustomerTypeDetailTest">
+        <test-method is-config="true" signature="Login()[pri:0, instance:io.gavl.SankalpWeb.VerifyCustomerTypeDetailTest@79924b]" started-at="2025-01-28T19:02:35 IST" name="Login" finished-at="2025-01-28T19:02:39 IST" duration-ms="3818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="verifyCustomerTypeAsRetaier()[pri:0, instance:io.gavl.SankalpWeb.VerifyCustomerTypeDetailTest@79924b]" started-at="2025-01-28T19:02:39 IST" name="verifyCustomerTypeAsRetaier" finished-at="2025-01-28T19:02:51 IST" duration-ms="12300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerTypeAsRetaier -->
+      </class> <!-- io.gavl.SankalpWeb.VerifyCustomerTypeDetailTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
