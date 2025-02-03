@@ -24,7 +24,7 @@ public class VerifyDistributorDetailTest extends BaseClass{
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		String distributorId="2016243";
+		String distributorId="2019378";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getFdistributor().click();
 		dashboardpage.getFilterSearchBox().sendKeys(distributorId);
@@ -55,7 +55,7 @@ public class VerifyDistributorDetailTest extends BaseClass{
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		String distributorName="A ONE KRUSHI SEVA KENDRA";
+		String distributorName="AARAV KRUSHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getFdistributor().click();
 		dashboardpage.getFilterSearchBox().sendKeys(distributorName);

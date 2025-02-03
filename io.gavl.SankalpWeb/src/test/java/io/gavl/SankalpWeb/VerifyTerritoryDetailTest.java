@@ -24,10 +24,10 @@ public class VerifyTerritoryDetailTest extends BaseClass{
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-//		String TerritoryName="AKOLA";
+		String TerritoryName="Amravati";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getfTerritory().click();
-//		dbp.getFilterSearchBox().sendKeys(TerritoryName);
+		dashboardpage.getFilterSearchBox().sendKeys(TerritoryName);
 		Thread.sleep(Duration.ofSeconds(10));
 		try {
 			dashboardpage.getTerritoryName().click();

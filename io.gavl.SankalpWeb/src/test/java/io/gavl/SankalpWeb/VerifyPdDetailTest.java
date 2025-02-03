@@ -24,7 +24,7 @@ public class VerifyPdDetailTest extends BaseClass{
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		String pdId="4563255";
+		String pdId="2001784";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getfPD().click();
 		dashboardpage.getFilterSearchBox().sendKeys(pdId);
@@ -54,7 +54,7 @@ public class VerifyPdDetailTest extends BaseClass{
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		String pdName="ABC farm supply";
+		String pdName="SANTOSH KRISHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getfPD().click();
 		dashboardpage.getFilterSearchBox().sendKeys(pdName);

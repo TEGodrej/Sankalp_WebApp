@@ -197,7 +197,7 @@ public class DashBoardPage {
 	@FindBy(xpath = "//button[@class='scCMButtonStyle scCMFilterButtonStyle']")
 	private WebElement closeBtn;
 	
-	@FindBy(xpath = "//span[text()=' -  A ONE KRUSHI SEVA KENDRA']")
+	@FindBy(xpath = "//span[text()='- AARAV KRUSHI SEVA KENDRA']")
 	private WebElement distributorName;
 	
 	@FindBy(xpath = "//div[@id='dvTopPlacementPerformersChart']")
@@ -209,31 +209,31 @@ public class DashBoardPage {
 	@FindBy(xpath = "//div[@id=\"dvTopProductsChartData\"]")
 	private WebElement topProductChart;
 	
-	@FindBy(xpath = "//span[text()=' - ABC farm supply']")
+	@FindBy(xpath = "//span[text()=' - SANTOSH KRISHI SEVA KENDRA']")
 	private WebElement pdName;
 	
-	@FindBy(xpath = "//span[text()='2016243 -  ']")
+	@FindBy(xpath = "//span[text()='2019378 - ']")
 	private WebElement distributroId;
 	
-	@FindBy(xpath = "//span[text()='4563255 - ']")
+	@FindBy(xpath = "//span[text()='2001784 - ']")
 	private WebElement pdId;
 	
-	@FindBy(xpath = "//span[text()=' - VIKAS ORGANIC MANURE 50 KG -  ']")
+	@FindBy(xpath = "//span[text()=' - HITWEED - 100 ml  - 0.1000 L']")
 	private WebElement productName;
 	
-	@FindBy(xpath = "//span[text()='28100002 - ']")
+	@FindBy(xpath = "//span[text()='28130000 - ']")
 	private WebElement productId;
 	
 	@FindBy(xpath = "//span[text()='CPB - CO-']")
 	private WebElement productGroupId;
 	
-	@FindBy(xpath = "//span[text()='-MARKETING BUSHI WP POWDER']")
+	@FindBy(xpath = "//span[text()='GAVL HITWEED LIQUID']/ancestor::div[@class='ng-star-inserted']")
 	private WebElement productGroupName;
 	
-	@FindBy(xpath = "//span[text()='AKOLA']")
+	@FindBy(xpath = "//span[text()='AMRAVATI']/ancestor::div[@class='ng-star-inserted']")
 	private WebElement territoryName;
 	
-	@FindBy(xpath = "//span[text()='Aurangabad']")
+	@FindBy(xpath = "//span[text()='Nagpur']")
 	private WebElement regionName;
 	
 	
