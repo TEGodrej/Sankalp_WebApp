@@ -14,9 +14,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	@Test
 	public void verifyUserAbleToSeeTodayPeriodThroughAllSelect() {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -50,9 +50,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeThisMonthPeriodThroughAllselect() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		
@@ -83,9 +83,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeThisYearPeriodThroughAllselect() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -109,9 +109,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeePreviousYearPeriodThroughAllselect() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));

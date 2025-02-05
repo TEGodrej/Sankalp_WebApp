@@ -13,13 +13,13 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToSeeWeightScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getWeight().click();
@@ -36,13 +36,13 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeShipperScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getShipper().click();
@@ -59,13 +59,13 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeeValueScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getValue().click();

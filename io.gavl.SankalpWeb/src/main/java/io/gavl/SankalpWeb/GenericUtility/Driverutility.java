@@ -28,6 +28,21 @@ public class Driverutility extends BaseClass{
 	
 	public void scrollIntoView(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",element);
+		js.executeScript("arguments[0].scrollIntoView(false);",element);
+	}
+	
+	public void forceScrollPage(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, arguments[0].getBoundingClientRect().top + window.scrollY);", element);
+
+	}
+	
+	public void scrollToElement(WebElement element) {
+		try {
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 }

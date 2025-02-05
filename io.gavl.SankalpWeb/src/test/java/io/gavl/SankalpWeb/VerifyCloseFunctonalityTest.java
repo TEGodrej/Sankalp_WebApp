@@ -16,9 +16,9 @@ public class VerifyCloseFunctonalityTest extends BaseClass{
 	@Test
 	public void verifyUserAbleToCloseThefilter() {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();	
 			
@@ -27,7 +27,7 @@ public class VerifyCloseFunctonalityTest extends BaseClass{
 			
 			}
 		
-		dashboardpage.getCloseBtn().click();
+		dashboardpage.getcloseButton().click();
 		WebElement dashBoardTitle=driver.findElement(By.xpath("//span[text()='Dashboard']"));
 		if(dashBoardTitle.isDisplayed()) {
 			assertTrue(true);

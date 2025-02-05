@@ -14,19 +14,19 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	@Test
 	public void verifyCustomerTypeAsDistributor() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		dashboardpage.getfCustomerType().click();
+		dashboardpage.getfilterCustomerType().click();
 		
 		WebElement distributor=driver.findElement(By.xpath("//span[text()='Distributor']"));
 		distributor.click();
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.getApplyButton().click();
 		WebElement  topPerformer=driver.findElement(By.xpath("//h5[text()='Top performers - Placement']"));
 		driverutility.scrollIntoView(topPerformer);
 		
@@ -37,19 +37,19 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	@Test
 	public void verifyCustomerTypeAsRetaier() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
-		dashboardpage.getfCustomerType().click();
+		dashboardpage.getfilterCustomerType().click();
 		
 		WebElement retailer=driver.findElement(By.xpath("//span[text()='Retailer']"));
 		retailer.click();
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.getApplyButton().click();
 //		WebElement  topPerformer=driver.findElement(By.xpath("//h5[text()='Top performers - Placement']"));
 		
 		

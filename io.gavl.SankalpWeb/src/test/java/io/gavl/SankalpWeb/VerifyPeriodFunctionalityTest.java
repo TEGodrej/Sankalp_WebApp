@@ -16,9 +16,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 
 	@Test
 	public void verifyUserAbleToViewPeriodWithThisMonthOption() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -45,9 +45,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithThisYearOption() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -74,9 +74,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithPreviousYearOption() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -101,9 +101,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeriodWithTodayOption() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();

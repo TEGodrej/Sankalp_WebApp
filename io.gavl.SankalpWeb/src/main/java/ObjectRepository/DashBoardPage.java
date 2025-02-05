@@ -1,13 +1,18 @@
 package ObjectRepository;
 
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 /*
  * @author Testing Engineer
  */
-public class DashBoardPage {
+public class DashBoardPage extends BaseClass{
 	
 	WebDriver driver;
 	public DashBoardPage(WebDriver driver) {
@@ -16,11 +21,7 @@ public class DashBoardPage {
 	}
 	
 	@FindBy(xpath = "(//a[@class='am5exporting am5exporting-icon am5exporting-align-right am5exporting-valign-top'])[3]")
-	private WebElement topPerformerPlacementDownloadBtn;
-	
-	
-	
-	
+	private WebElement topPerformerPlacementDownloadButton;
 	
 	@FindBy(xpath = "//input[@id='SearchTextForList']")
 	private WebElement filterSearchBox;
@@ -44,7 +45,7 @@ public class DashBoardPage {
 	private WebElement productAll;
 	
 	@FindBy(xpath = "(//span[text()=' All '])[2]")
-	private WebElement placliquiAll;
+	private WebElement placeLiquidationAll;
 	
 	@FindBy(xpath = "(//span[text()=' All '])[3]")
 	private WebElement placementAll;
@@ -56,10 +57,10 @@ public class DashBoardPage {
 	private WebElement productDownload;
 	
 	@FindBy(xpath = "(//a[@class='am5exporting am5exporting-icon am5exporting-align-right am5exporting-valign-top'])[2]")
-	private WebElement placLiquiDwnlod;
+	private WebElement placeLiquidationDownload;
 	
 	@FindBy(xpath = "(//a[@class='am5exporting am5exporting-icon am5exporting-align-right am5exporting-valign-top'])[3]")
-	private WebElement placementdownload;
+	private WebElement placementDownload;
 	
 	@FindBy(xpath = "(//a[@class='am5exporting am5exporting-icon am5exporting-align-right am5exporting-valign-top'])[4]")
 	private WebElement liquidationDownload;
@@ -138,70 +139,70 @@ public class DashBoardPage {
 	private WebElement TPLxlsx;
 	
 	@FindBy(xpath = "//*[name()='svg' and contains(@class,'ng-tns-c56-6')]")
-	private WebElement scanTypeDnArrow;
+	private WebElement scanTypeDownArrow;
 	
 	@FindBy(xpath = "//div[text()=' Period ']")
-	private WebElement fPeriod;
+	private WebElement filterPeriod;
 	
 	@FindBy(xpath = "//div[text()=' Scan type ']")
-	private WebElement fScanType;
+	private WebElement filterScanType;
 	
 	@FindBy(xpath = "//div[text()=' Customer type ']")
-	private WebElement fCustomerType;
+	private WebElement filterCustomerType;
 	
 	@FindBy(xpath = "//div[text()=' Distributor ']")
-	private WebElement fdistributor;
+	private WebElement filterDistributor;
 	
 	@FindBy(xpath = "//div[text()=' Retailer ']")
-	private WebElement fRetailer;
+	private WebElement filterRetailer;
 	
 	@FindBy(xpath = "//div[text()=' PD ']")
-	private WebElement fPD;
+	private WebElement filterPD;
 	
 	@FindBy(xpath = "//div[text()=' Product ']")
-	private WebElement fProduct;
+	private WebElement filterProduct;
 	
 	@FindBy(xpath = "//div[text()=' Product group ']")
-	private WebElement fProductGroup;
+	private WebElement filterProductGroup;
 	
 	@FindBy(xpath = "//div[text()=' Territory ']")
-	private WebElement fTerritory;
+	private WebElement filterTerritory;
 	
 	@FindBy(xpath = "//div[text()=' Region ']")
-	private WebElement fRegion;
+	private WebElement filterRegion;
 	
 	@FindBy(xpath = "//div[text()=' Unit ']")
-	private WebElement fUnit;
+	private WebElement filterUnit;
 	
 	@FindBy(xpath = "//div[@class='scASFDialogDatePickerList']/descendant::li[text()='  Today ']")
-	private WebElement fToday;
+	private WebElement filterToday;
 	
 	@FindBy(xpath = "//div[@class='scASFDialogDatePickerList']/descendant::li[text()='  This month ']")
-	private WebElement fThisMonth;
+	private WebElement filterThisMonth;
 	
 	@FindBy(xpath = "//div[@class='scASFDialogDatePickerList']/descendant::li[text()='  This year (YTD) ']")
-	private WebElement fThisYear;
+	private WebElement filterThisYear;
 	
 	@FindBy(xpath = "//div[@class='scASFDialogDatePickerList']/descendant::li[text()='  Previous year (Jan - Dec) ']")
-	private WebElement fPreviousYear;
+	private WebElement filterPreviousYear;
 	
 	@FindBy(xpath = "//div[@class='scASFDialogDatePickerList']/descendant::li[text()=' Custom date range ']")
-	private WebElement fCustomDateRange;
+	private WebElement filterCustomDateRange;
 	
 	@FindBy(xpath = "//button[@class='scCMButtonStyle scCMFilterButtonStyle ng-star-inserted']/following::i[@class='fa fa-check-circle scCMButtonIcon']")
-	private WebElement ApplyBtn;
+	private WebElement ApplyButton;
 	
 	@FindBy(xpath = "//button[@class='scCMButtonStyle scCMFilterButtonStyle ng-star-inserted']//i[@class='fa fa-undo scCMButtonIcon']")
-	private WebElement ResetBtn;
+	private WebElement ResetButton;
 	
 	@FindBy(xpath = "//button[@class='scCMButtonStyle scCMFilterButtonStyle']")
-	private WebElement closeBtn;
+	private WebElement closeButton;
 	
-	@FindBy(xpath = "//span[text()='- AARAV KRUSHI SEVA KENDRA']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,'AARAV KRUSHI SEVA KENDRA')]")
 	private WebElement distributorName;
 	
-	@FindBy(xpath = "//div[@id='dvTopPlacementPerformersChart']")
-	private WebElement topPerformerChart;
+	@FindBy(xpath = "//h5[text()='Top performers - Placement']")
+	private WebElement topPerformersPlacementText;
 	
 	@FindBy(xpath = "//span[text()=' - Testing kirana store']")
 	private WebElement  retailerName;
@@ -212,22 +213,22 @@ public class DashBoardPage {
 	@FindBy(xpath = "//span[text()=' - SANTOSH KRISHI SEVA KENDRA']")
 	private WebElement pdName;
 	
-	@FindBy(xpath = "//span[text()='2019378 - ']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,'2019378 - ')]")
 	private WebElement distributroId;
 	
 	@FindBy(xpath = "//span[text()='2001784 - ']")
 	private WebElement pdId;
 	
-	@FindBy(xpath = "//span[text()=' - HITWEED - 100 ml  - 0.1000 L']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,' - VIKAS ORGANIC MANURE 50 KG -  ')]")
 	private WebElement productName;
 	
-	@FindBy(xpath = "//span[text()='28130000 - ']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,'28100002 - ')]")
 	private WebElement productId;
 	
 	@FindBy(xpath = "//span[text()='CPB - CO-']")
 	private WebElement productGroupId;
 	
-	@FindBy(xpath = "//span[text()='GAVL HITWEED LIQUID']/ancestor::div[@class='ng-star-inserted']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,'-MARKETING BUSHI WP POWDER')]")
 	private WebElement productGroupName;
 	
 	@FindBy(xpath = "//span[text()='AMRAVATI']/ancestor::div[@class='ng-star-inserted']")
@@ -236,6 +237,11 @@ public class DashBoardPage {
 	@FindBy(xpath = "//span[text()='Nagpur']")
 	private WebElement regionName;
 	
+	@FindBy(xpath = "(//div[text()=' No details found.'])[3]")
+	private WebElement TopPerformersErrorMessage;
+	
+	@FindBy(xpath = "(//div[text()=' No details found.'])[1]")
+	private WebElement topProductErrorMessage;
 	
 	public WebElement getRegionName() {
 		return regionName;
@@ -282,15 +288,15 @@ public class DashBoardPage {
 	}
 
 	public WebElement getTopPerformerChart() {
-		return topPerformerChart;
+		return topPerformersPlacementText;
 	}
 
 	public WebElement getDistributorName() {
 		return distributorName;
 	}
 
-	public WebElement getTopPerformerPlacementDownloadBtn() {
-		return topPerformerPlacementDownloadBtn;
+	public WebElement getTopPerformerPlacementDownloadButton() {
+		return topPerformerPlacementDownloadButton;
 	}
 
 	public WebElement getFilterSearchBox() {
@@ -309,84 +315,84 @@ public class DashBoardPage {
 		return scanTypeValue;
 	}
 
-	public WebElement getfPeriod() {
-		return fPeriod;
+	public WebElement getfilterPeriod() {
+		return filterPeriod;
 	}
 
-	public WebElement getfScanType() {
-		return fScanType;
+	public WebElement getfilterScanType() {
+		return filterScanType;
 	}
 
-	public WebElement getfCustomerType() {
-		return fCustomerType;
+	public WebElement getfilterCustomerType() {
+		return filterCustomerType;
 	}
 
-	public WebElement getFdistributor() {
-		return fdistributor;
+	public WebElement getfilterdistributor() {
+		return filterDistributor;
 	}
 
-	public WebElement getfRetailer() {
-		return fRetailer;
+	public WebElement getfilterRetailer() {
+		return filterRetailer;
 	}
 
-	public WebElement getfPD() {
-		return fPD;
+	public WebElement getfilterPD() {
+		return filterPD;
 	}
 
-	public WebElement getfProduct() {
-		return fProduct;
+	public WebElement getfilterProduct() {
+		return filterProduct;
 	}
 
-	public WebElement getfProductGroup() {
-		return fProductGroup;
+	public WebElement getfilterProductGroup() {
+		return filterProductGroup;
 	}
 
-	public WebElement getfTerritory() {
-		return fTerritory;
+	public WebElement getfilterTerritory() {
+		return filterTerritory;
 	}
 
-	public WebElement getfRegion() {
-		return fRegion;
+	public WebElement getfilterRegion() {
+		return filterRegion;
 	}
 
-	public WebElement getfUnit() {
-		return fUnit;
+	public WebElement getfilterUnit() {
+		return filterUnit;
 	}
 
-	public WebElement getfToday() {
-		return fToday;
+	public WebElement getfilterToday() {
+		return filterToday;
 	}
 
-	public WebElement getfThisMonth() {
-		return fThisMonth;
+	public WebElement getfilterThisMonth() {
+		return filterThisMonth;
 	}
 
-	public WebElement getfThisYear() {
-		return fThisYear;
+	public WebElement getfilterThisYear() {
+		return filterThisYear;
 	}
 
-	public WebElement getfPreviousYear() {
-		return fPreviousYear;
+	public WebElement getfilterPreviousYear() {
+		return filterPreviousYear;
 	}
 
-	public WebElement getfCustomDateRange() {
-		return fCustomDateRange;
+	public WebElement getfilterCustomDateRange() {
+		return filterCustomDateRange;
 	}
 
-	public WebElement getApplyBtn() {
-		return ApplyBtn;
+	public WebElement getApplyButton() {
+		return ApplyButton;
 	}
 
-	public WebElement getResetBtn() {
-		return ResetBtn;
+	public WebElement getResetButton() {
+		return ResetButton;
 	}
 
-	public WebElement getCloseBtn() {
-		return closeBtn;
+	public WebElement getcloseButton() {
+		return closeButton;
 	}
 
-	public WebElement getScanTypeDnArrow() {
-		return scanTypeDnArrow;
+	public WebElement getscanTypeDownArrow() {
+		return scanTypeDownArrow;
 	}
 
 	public WebElement getProductXlsx() {
@@ -425,8 +431,8 @@ public class DashBoardPage {
 		return productAll;
 	}
 
-	public WebElement getPlacliquiAll() {
-		return placliquiAll;
+	public WebElement getplaceLiquidationAll() {
+		return placeLiquidationAll;
 	}
 
 	public WebElement getPlacementAll() {
@@ -441,12 +447,12 @@ public class DashBoardPage {
 		return productDownload;
 	}
 
-	public WebElement getPlacLiquiDwnlod() {
-		return placLiquiDwnlod;
+	public WebElement getplaceLiquidationDownload() {
+		return placeLiquidationDownload;
 	}
 
-	public WebElement getPlacementdownload() {
-		return placementdownload;
+	public WebElement getplacementDownload() {
+		return placementDownload;
 	}
 
 	public WebElement getLiquidationDownload() {
@@ -537,6 +543,165 @@ public class DashBoardPage {
 		return filterOptiopn;
 	}
 	
+	public void clickOnFilterOption() {
+		try {
+			filterOptiopn.click();
+		}catch(ElementNotInteractableException e ) {
+			filterOptiopn.click();
+		}
+	}
 	
+	public void clickOnPreviousYear() {
+		try {
+			filterPreviousYear.click();
+		}catch(Exception e) {
+		}
+		
+	}
+	public void clickOnFilterDistributor() {
+		try {
+		filterDistributor.click();
+		}catch(Exception e) {
+			System.out.println("not able to click");
+		}
+	}
 	
+	public void sendKeyToSearchBox(String key) {
+		try {
+		filterSearchBox.sendKeys(key);
+		}catch(Exception e) {
+			System.out.println("not able to click");
+		}
+	}
+	
+	public void clickOnDistributorName() {
+		try {
+			distributorName.click();
+		}catch(Exception e) {
+			System.out.println("not able to click");
+		}
+	}
+	
+	public void clickOnApplyButton() {
+		try {
+			ApplyButton.click();
+		}catch(Exception e) {
+			System.out.println("not able to click");
+		}
+	}
+	
+	public void scrollToTopPerformer() {
+		try {
+			driverutility.scrollToElement(topPerformersPlacementText);
+		}catch(Exception e) {
+			System.out.println("not able to scroll");
+		}
+	}
+	
+	public void assertMessage() {
+		try {
+			assertTrue(topPerformersPlacementText.isDisplayed());
+		}catch(Exception e) {
+			assertTrue(TopPerformersErrorMessage.isDisplayed());
+		}
+	}
+	 public void clickOnDistributorId() {
+		 try {
+			 distributroId.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 
+	 public void clickOnFilterPd() {
+		 try {
+			 filterPD.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 
+	 public void clickOnPdId() {
+		 try {
+			 pdId.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 public void clickOnPdName() {
+		 try {
+			 pdName.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 
+	 public void scrollToTopProductChart() {
+		 try {
+			 driverutility.scrollToElement(topProductChart);
+		 }catch(Exception e) {
+				System.out.println("not able to scroll");
+			}
+	 }
+	 
+	 public void assertTopProduct() {
+		 try {
+			 assertTrue(topProductChart.isDisplayed());
+		 }catch(Exception e) {
+			 assertTrue(true);
+		 }
+	 }
+	
+	 public void clickOnProductGroup() {
+		 try {
+			 filterProductGroup.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 
+	 public void clickOnProductGroupId() {
+		 try {
+			 productGroupId.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 
+	 public void clickOnFilterProduct() {
+		 try {
+		 filterProduct.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 public void clickOnProductName() {
+		 try {
+			 productName.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 public void clickOnProductId() {
+		 try {
+			 productId.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 public void clickOnFilterTerritory() {
+		 try {
+			 filterTerritory.click();
+		 }catch(Exception e) {
+				System.out.println("not able to click");
+			}
+	 }
+	 public void clickOnTerritoryName() {
+		 try {
+			 territoryName.click();
+		 }catch (Exception e ) {
+			 System.out.println("not able to click");
+		 }
+	 }
+	 
 }

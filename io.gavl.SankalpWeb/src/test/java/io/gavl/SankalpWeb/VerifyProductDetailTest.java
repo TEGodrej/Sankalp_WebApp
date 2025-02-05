@@ -1,12 +1,7 @@
 package io.gavl.SankalpWeb;
 
-import static org.testng.Assert.assertFalse;
-
 import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
@@ -16,60 +11,34 @@ public class VerifyProductDetailTest extends BaseClass{
 	@Test
 	public void verifyProductDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
+		loginpage.userlogin("demouser", "demouser");
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnPreviousYear();
 		String pdId="28100002";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfProduct().click();
-		dashboardpage.getFilterSearchBox().sendKeys(pdId);
+		dashboardpage.clickOnFilterProduct();
+		dashboardpage.sendKeyToSearchBox(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getProductName().click();
-		
-		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.clickOnProductName();
+		dashboardpage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dashboardpage.getTopProductChart();
-		driverutility.scrollIntoView(chart);
-		
-		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
-		
-//		assertTrue(chart.isDisplayed(), "Chart is not displayed"); 
-		assertFalse(noDetailFound.isDisplayed(), "No details found is displayed");
+		dashboardpage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyProductDetailByCode() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
+		loginpage.userlogin("demouser", "demouser");
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnPreviousYear();
 		String pdId="VIKAS ORGANIC MANURE 50 KG";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfProduct().click();
+		dashboardpage.clickOnFilterProduct();
 		dashboardpage.getFilterSearchBox().sendKeys(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getProductId().click();
-		
-		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.clickOnProductId();
+		dashboardpage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dashboardpage.getTopProductChart();
-		driverutility.scrollIntoView(chart);
-		
-		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
-		
-//		assertTrue(chart.isDisplayed(), "Chart is not displayed"); 
-		assertFalse(noDetailFound.isDisplayed(), "No details found is displayed");
+		dashboardpage.assertTopProduct();
 	}
 }

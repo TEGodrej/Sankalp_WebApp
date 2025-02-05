@@ -14,25 +14,36 @@ public class LoginPage {
 	}
 
 	@FindBy(id = "Username")
-	private WebElement usernameTxtFld;
+	private WebElement usernameTextField;
 	
 	@FindBy(id = "Password")
-	private WebElement passwordTxtfld;
+	private WebElement passwordTextField;
 	
 	@FindBy(xpath = "//span[text()=' Login']")
-	private WebElement loginBtn;
+	private WebElement loginButton;
 
-	public WebElement getUsernameTxtFld() {
-		return usernameTxtFld;
+	public WebElement getUsernameTextField() {
+		return usernameTextField;
 	}
 
-	public WebElement getPasswordTxtfld() {
-		return passwordTxtfld;
+	public WebElement getPasswordTextField() {
+		return passwordTextField;
 	}
 
-	public WebElement getLoginBtn() {
-		return loginBtn;
+	public WebElement getLoginButton() {
+		return loginButton;
 	}
+	
+		public void userlogin( String existingUserName, String existingPassword) {
+			try {
+			usernameTextField.sendKeys(existingUserName);
+			passwordTextField.sendKeys(existingPassword);
+			loginButton.click();
+		}catch(Exception e) {
+			
+		}
+	}
+	
 	
 	
 }

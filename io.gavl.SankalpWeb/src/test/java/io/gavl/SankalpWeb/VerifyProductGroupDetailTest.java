@@ -16,39 +16,27 @@ public class VerifyProductGroupDetailTest extends BaseClass{
 	@Test
 	public void verifyProductGroupDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
+		loginpage.userlogin("demouser", "demouser");
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnPreviousYear();
 		String productName="MARKETING BUSHI WP POWDER";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfProductGroup().click();
-		dashboardpage.getFilterSearchBox().sendKeys(productName);
+		dashboardpage.clickOnProductGroup();
+		dashboardpage.sendKeyToSearchBox(productName);;
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getProductGroupId().click();
-		
-		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.clickOnProductGroupId();;
+		dashboardpage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dashboardpage.getTopProductChart();
-		driverutility.scrollIntoView(chart);
-		
-		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
-		
-//		assertTrue(chart.isDisplayed(), "Chart is not displayed"); 
-		assertFalse(noDetailFound.isDisplayed(), "No details found is displayed");
+		dashboardpage.assertTopProduct();
+
 	}
 	
 	@Test
 	public void verifyProductGroupDetailByCode() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
@@ -56,13 +44,13 @@ public class VerifyProductGroupDetailTest extends BaseClass{
 		}
 		String productId="CPB - CO";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfProductGroup().click();
+		dashboardpage.getfilterProductGroup().click();
 		dashboardpage.getFilterSearchBox().sendKeys(productId);
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getProductGroupName().click();
 		
 		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.getApplyButton().click();
 		Thread.sleep(Duration.ofSeconds(10));
 		WebElement chart=  dashboardpage.getTopProductChart();
 		driverutility.scrollIntoView(chart);

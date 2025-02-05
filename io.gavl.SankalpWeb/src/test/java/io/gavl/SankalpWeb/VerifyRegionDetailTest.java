@@ -15,16 +15,16 @@ public class VerifyRegionDetailTest extends BaseClass{
 	@Test
 	public void verifyRegionDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
 			dashboardpage.getFilterOptiopn().click();
 		}
 //		String TerritoryName="AKOLA";
-		WebElement region=dashboardpage.getfRegion();
+		WebElement region=dashboardpage.getfilterRegion();
 		driverutility.scrollIntoView(region);
 		region.click();
 //		dbp.getFilterSearchBox().sendKeys(TerritoryName);
@@ -35,7 +35,7 @@ public class VerifyRegionDetailTest extends BaseClass{
 			dashboardpage.getRegionName().click();
 		}
 		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.getApplyButton().click();
 		Thread.sleep(Duration.ofSeconds(10));
 		WebElement chart=  dashboardpage.getTopProductChart();
 		driverutility.scrollIntoView(chart);

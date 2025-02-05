@@ -5,47 +5,47 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class changePasswordPage {
+public class ChangePasswordPage {
 	
 	WebDriver driver;
-	public changePasswordPage(WebDriver driver) {
+	public ChangePasswordPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "mat-input-3")
-	private WebElement oldPaswrdFld;
+	private WebElement oldPasawordField;
 	
 	@FindBy(id = "mat-input-4")
-	private WebElement newPaswrdFld;
+	private WebElement newPasswordField;
 	
 	@FindBy(id = "mat-input-5")
-	private WebElement confrmPaswrdFld;
+	private WebElement confirmPasswordField;
 	
 	@FindBy(xpath = "//button[@class='scCMButtonStyle' and contains(text(),' Change password')]")
-	private WebElement changePaswrdBtn;
+	private WebElement changePasswordButton;
 	
 	@FindBy(xpath = "//button[@class='scCMButtonStyle' and contains(text(),'Close ')]")
-	private WebElement closeBtn;
+	private WebElement closeButton;
 
-	public WebElement getOldPaswrdFld() {
-		return oldPaswrdFld;
+	public WebElement getoldPasawordField() {
+		return oldPasawordField;
 	}
 
-	public WebElement getNewPaswrdFld() {
-		return newPaswrdFld;
+	public WebElement getnewPasswordField() {
+		return newPasswordField;
 	}
 
-	public WebElement getConfrmPaswrdFld() {
-		return confrmPaswrdFld;
+	public WebElement getconfirmPasswordField() {
+		return confirmPasswordField;
 	}
 
-	public WebElement getChangePaswrdBtn() {
-		return changePaswrdBtn;
+	public WebElement getchangePasswordButton() {
+		return changePasswordButton;
 	}
 
 	public WebElement getCloseBtn() {
-		return closeBtn;
+		return closeButton;
 	}
 	
 	

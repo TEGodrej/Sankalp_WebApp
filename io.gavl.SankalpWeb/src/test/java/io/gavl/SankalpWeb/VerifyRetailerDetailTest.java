@@ -15,9 +15,9 @@ public class VerifyRetailerDetailTest extends BaseClass{
 	@Test
 	public void  verifyUserAbleToFetchRetailerDetails() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
@@ -25,13 +25,13 @@ public class VerifyRetailerDetailTest extends BaseClass{
 		}
 		String retailerId="7517658";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfRetailer().click();
+		dashboardpage.getfilterRetailer().click();
 		dashboardpage.getFilterSearchBox().sendKeys(retailerId);
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.getRetailerName().click();
 		
 		
-		dashboardpage.getApplyBtn().click();
+		dashboardpage.getApplyButton().click();
 		Thread.sleep(Duration.ofSeconds(10));
 		WebElement chart=  dashboardpage.getTopProductChart();
 		driverutility.scrollIntoView(chart);

@@ -16,9 +16,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyTop10Functionality() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
         WebElement ProductsGraph=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
 		if(ProductsGraph.isDisplayed()) {
 			assertTrue(true);
@@ -29,9 +29,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyAllFunctionality() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		dashboardpage.getProductAll().click();
 		WebElement ProductAll=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
 		if(ProductAll.isDisplayed()) {
@@ -43,9 +43,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsValue() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -61,9 +61,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getValue().click();
@@ -78,9 +78,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -96,9 +96,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -114,9 +114,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -132,9 +132,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -149,9 +149,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -167,9 +167,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -185,9 +185,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -203,9 +203,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -221,9 +221,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsValue() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -239,9 +239,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getValue().click();
@@ -257,9 +257,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -275,9 +275,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -293,9 +293,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -311,9 +311,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -329,9 +329,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsValue() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -347,9 +347,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getValue().click();
@@ -365,9 +365,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -383,9 +383,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -401,9 +401,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -419,9 +419,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -436,9 +436,9 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -454,9 +454,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -471,9 +471,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -488,9 +488,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -505,9 +505,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -522,9 +522,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -539,9 +539,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -556,9 +556,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -573,9 +573,9 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -590,9 +590,9 @@ public class VerifyTopProductTest extends BaseClass {
 				System.out.println("Element is clicked");
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();

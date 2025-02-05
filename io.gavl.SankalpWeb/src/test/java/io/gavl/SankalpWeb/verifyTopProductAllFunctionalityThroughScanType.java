@@ -14,9 +14,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughWeightScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -30,9 +30,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				dashboardpage.getThismonth().click();
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -53,9 +53,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughShipperScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -69,9 +69,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				dashboardpage.getThismonth().click();
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -91,9 +91,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductAllFunctionalityThroughValueScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -107,9 +107,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				dashboardpage.getThismonth().click();
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getValue().click();
@@ -128,9 +128,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	}
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughWeightScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -144,9 +144,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				dashboardpage.getThisYr().click();
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getWeight().click();
@@ -166,9 +166,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughShipperScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -182,9 +182,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 				dashboardpage.getThisYr().click();
 			}
 			try {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}catch(ElementClickInterceptedException e) {
-				dashboardpage.getScanTypeDnArrow().click();
+				dashboardpage.getscanTypeDownArrow().click();
 			}
 			try {
 				dashboardpage.getShipper().click();
@@ -204,9 +204,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductThisYearAllFunctionalityThroughValueScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -220,9 +220,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			dashboardpage.getThisYr().click();
 		}
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getValue().click();
@@ -243,9 +243,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughWeightScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -259,9 +259,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getWeight().click();
@@ -281,9 +281,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughShipperScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -297,9 +297,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getShipper().click();
@@ -320,9 +320,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 	
 	@Test
 	public void verifyTopProductPreviousYearAllFunctionalityThroughValueScanType() {
-		loginpage.getUsernameTxtFld().sendKeys("demouser");
-		loginpage.getPasswordTxtfld().sendKeys("demouser");
-		loginpage.getLoginBtn().click();
+		loginpage.getUsernameTextField().sendKeys("demouser");
+		loginpage.getPasswordTextField().sendKeys("demouser");
+		loginpage.getLoginButton().click();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -336,9 +336,9 @@ public class verifyTopProductAllFunctionalityThroughScanType extends BaseClass{
 			dashboardpage.getPreviousYear().click();
 		}
 		try {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}catch(ElementClickInterceptedException e) {
-			dashboardpage.getScanTypeDnArrow().click();
+			dashboardpage.getscanTypeDownArrow().click();
 		}
 		try {
 			dashboardpage.getValue().click();
