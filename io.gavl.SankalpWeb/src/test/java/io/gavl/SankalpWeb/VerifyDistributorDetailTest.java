@@ -19,7 +19,7 @@ public class VerifyDistributorDetailTest extends BaseClass{
 		String distributorId="2019378";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.clickOnFilterDistributor();
-		dashboardpage.sendKeyToSearchBox(distributorId);;
+		dashboardpage.sendKeyToSearchBox(distributorId);
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.clickOnDistributorName();
 		dashboardpage.clickOnApplyButton();
@@ -41,7 +41,7 @@ public class VerifyDistributorDetailTest extends BaseClass{
 		String distributorName="AARAV KRUSHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.clickOnFilterDistributor();
-		dashboardpage.sendKeyToSearchBox(distributorName);;
+		dashboardpage.sendKeyToSearchBox(distributorName);
 		Thread.sleep(Duration.ofSeconds(10));
 		dashboardpage.clickOnDistributorId();
 		

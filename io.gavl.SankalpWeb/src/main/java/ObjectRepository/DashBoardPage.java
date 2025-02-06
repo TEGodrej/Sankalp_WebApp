@@ -268,6 +268,9 @@ public class DashBoardPage extends BaseClass{
 	@FindBy(xpath = "//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']")
 	private WebElement TopProductAllButton;
 	
+	@FindBy(xpath = "//span[text()='Dashboard']")
+	private WebElement dashBoarTitle;
+	
 	public WebElement getRegionName() {
 		return regionName;
 	}
@@ -897,6 +900,27 @@ public class DashBoardPage extends BaseClass{
 			 scanTypeValue.click();
 		 }catch(Exception e) {
 			 System.out.println("Not able to click on scanTypeValue");
+		 }
+	 }
+	 public void assertDashBoarTitle() {
+		 try {
+			 dashBoarTitle.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to assert on dashBoarTitle");
+		 }
+	 }
+	 public void clickOnFilterRetailer() {
+		 try {
+			 filterRetailer.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to assert on dashBoarTitle");
+		 }
+	 }
+	 public void clickOnRetailerName() {
+		 try {
+			 retailerName.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to assert on dashBoarTitle");
 		 }
 	 }
 }

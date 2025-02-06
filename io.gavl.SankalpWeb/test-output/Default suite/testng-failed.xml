@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="io.gavl.SankalpWeb.VerifyDistributorDetailTest">
+      <class name="io.gavl.SankalpWeb.VerifyLoginFuntionalityTest">
         <methods>
-          <include name="VerifyUserAbleToFetchDistributorDetails"/>
           <include name="Login"/>
+          <include name="verifyuserAbleToLoginWithValidCredential"/>
         </methods>
-      </class> <!-- io.gavl.SankalpWeb.VerifyDistributorDetailTest -->
+      </class> <!-- io.gavl.SankalpWeb.VerifyLoginFuntionalityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

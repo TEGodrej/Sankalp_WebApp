@@ -4,24 +4,24 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class FileUtility {
-    private static Properties prop = new Properties(); 
+public class FileUtility extends BaseClass{
+    private static Properties properties = new Properties(); 
 
-    public static void main(String[] args) {
+    public static void propertyFile() {
         try {
-            FileInputStream fis = new FileInputStream("C:\\Users\\testing.engineer\\OneDrive - GODREJ INDUSTRIES LIMITED\\Desktop\\TestData\\SankalpPropertyFile.txt");
-            prop.load(fis);
-            fis.close();
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\testing.engineer\\git\\sankalp\\Web\\io.gavl.SankalpWeb\\src\\test\\resources\\testData\\SankalpPropertyFile.property");
+            properties.load(fileInputStream);
+//            fis.close();
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        String value = getProperty("yourKey");  
-        System.out.println("Value: " + value);
+        
     }
 
     public static String getProperty(String key) {
-        String value = prop.getProperty(key); 
+        String value = properties.getProperty(key); 
         return value;
     }
 }

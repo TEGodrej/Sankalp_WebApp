@@ -42,8 +42,6 @@ public class VerifyRegionDetailTest extends BaseClass{
 		dashboardpage.scrollToRegion();
 		dashboardpage.clickFilterRegion();
 		dashboardpage.sendKeyToSearchBox(regionCode);
-//		Thread.sleep(Duration.ofSeconds(10));
-//		dashboardpage.clickOnRegionName();
 		
 		dashboardpage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));

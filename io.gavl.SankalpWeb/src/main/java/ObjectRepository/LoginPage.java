@@ -1,9 +1,15 @@
 package ObjectRepository;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.aventstack.extentreports.utils.FileUtil;
+
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class LoginPage {
 	
@@ -34,11 +40,15 @@ public class LoginPage {
 		return loginButton;
 	}
 	
-		public void userlogin( String existingUserName, String existingPassword) {
+		public void userlogin( String userName, String password) {
 			try {
-			usernameTextField.sendKeys(existingUserName);
-			passwordTextField.sendKeys(existingPassword);
-			loginButton.click();
+			FileUtility.propertyFile();
+//			FileUtility.getProperty(userName);
+//			FileUtility.getProperty(password);
+//			usernameTextField.sendKeys(FileUtility.getProperty(userName));
+//			Thread.sleep(Duration.ofSeconds(2));
+//			passwordTextField.sendKeys(FileUtility.getProperty(password));
+//			loginButton.click();
 		}catch(Exception e) {
 			
 		}
