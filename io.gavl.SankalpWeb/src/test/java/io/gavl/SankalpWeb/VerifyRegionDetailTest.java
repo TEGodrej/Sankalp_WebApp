@@ -1,48 +1,52 @@
 package io.gavl.SankalpWeb;
 
-import static org.testng.Assert.assertTrue;
-
 import java.time.Duration;
 
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyRegionDetailTest extends BaseClass{
 
 	@Test
 	public void verifyRegionDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
-//		String TerritoryName="AKOLA";
-		WebElement region=dashboardpage.getfilterRegion();
-		driverutility.scrollIntoView(region);
-		region.click();
-//		dbp.getFilterSearchBox().sendKeys(TerritoryName);
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnPreviousYear();
+		String regionName="Nagpur";
+		dashboardpage.scrollToRegion();
+		dashboardpage.clickFilterRegion();
+		dashboardpage.sendKeyToSearchBox(regionName);
 		Thread.sleep(Duration.ofSeconds(10));
-		try {
-			dashboardpage.getRegionName().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getRegionName().click();
-		}
+		dashboardpage.clickOnRegionName();
 		
-		dashboardpage.getApplyButton().click();
+		dashboardpage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		WebElement chart=  dashboardpage.getTopProductChart();
-		driverutility.scrollIntoView(chart);
+		dashboardpage.assertTopProduct();
 		
-//		WebElement noDetailFound=driver.findElement(By.xpath("(//div[text()=' No details found.'])[1]"));
+	}
+	
+	@Test
+	public void verifyRegionDetailByCode() throws InterruptedException {
+		driverutility.implicitlyWait(10);
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnPreviousYear();
+		String regionCode="F26";
+		dashboardpage.scrollToRegion();
+		dashboardpage.clickFilterRegion();
+		dashboardpage.sendKeyToSearchBox(regionCode);
+//		Thread.sleep(Duration.ofSeconds(10));
+//		dashboardpage.clickOnRegionName();
 		
-		assertTrue(chart.isDisplayed(), "Chart is not displayed"); 
-//		assertFalse(noDetailFound.isDisplayed(), "No details found is displayed");
+		dashboardpage.clickOnApplyButton();
+		Thread.sleep(Duration.ofSeconds(10));
+		dashboardpage.assertTopProduct();
 	}
 }

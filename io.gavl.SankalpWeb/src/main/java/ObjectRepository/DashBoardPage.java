@@ -69,13 +69,13 @@ public class DashBoardPage extends BaseClass{
 	private WebElement graphTab;
 	
 	@FindBy(xpath = "//div[@id='mat-select-2-panel']/descendant::span[text()='  This year (YTD) ']")
-	private WebElement thisYr;
+	private WebElement thisYear;
 	
 	@FindBy(xpath = "//div[@id='mat-select-2-panel']/descendant::span[text()='  Today ']")
 	private WebElement today;
 	
 	@FindBy(xpath = "//div[@id='mat-select-2-panel']/descendant::span[text()='  This month ']")
-	private WebElement thismonth;
+	private WebElement thisMonth;
 	
 	@FindBy(xpath = "//div[@id='mat-select-2-panel']/descendant::span[text()='  Previous year (Jan - Dec) ']")
 	private WebElement previousYear;
@@ -234,7 +234,7 @@ public class DashBoardPage extends BaseClass{
 	@FindBy(xpath = "//span[text()='AMRAVATI']/ancestor::div[@class='ng-star-inserted']")
 	private WebElement territoryName;
 	
-	@FindBy(xpath = "//span[text()='Nagpur']")
+	@FindBy(xpath = "//ul[@class='list-group scASFDialogListGroup' and contains(.,'Nagpur')]")
 	private WebElement regionName;
 	
 	@FindBy(xpath = "(//div[text()=' No details found.'])[3]")
@@ -242,6 +242,31 @@ public class DashBoardPage extends BaseClass{
 	
 	@FindBy(xpath = "(//div[text()=' No details found.'])[1]")
 	private WebElement topProductErrorMessage;
+	
+	@FindBy(id = "mat-radio-3-input")
+	private WebElement toRadioButton; 
+	
+	@FindBy(xpath = "//span[@class='mat-mdc-button-persistent-ripple mdc-button__ripple']")
+	private WebElement yearDropDown;
+	
+	@FindBy(xpath = "//div[text()=' 2024 ']")
+	private WebElement year2024;
+	 
+	
+	@FindBy(xpath = "//button[@class='mat-calendar-body-cell mat-calendar-body-active']")
+	private WebElement firstDayOfMonth;
+	
+	@FindBy(xpath = "//button[@class='mat-calendar-body-cell' and contains(.,'5')]")
+	private WebElement fifthDayOfMonth;
+	
+	@FindBy(xpath = "//label[text()=' Search ']")
+	private WebElement searchTitle;
+	
+	@FindBy(xpath = "//*[name()='svg' and contains(@class, 'ng-tns-c56-16')]")
+	private WebElement dashboardPeriodDropDown;
+	
+	@FindBy(xpath = "//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']")
+	private WebElement TopProductAllButton;
 	
 	public WebElement getRegionName() {
 		return regionName;
@@ -464,7 +489,7 @@ public class DashBoardPage extends BaseClass{
 	}
 
 	public WebElement getThisYr() {
-		return thisYr;
+		return thisYear;
 	}
 
 	public WebElement getToday() {
@@ -472,7 +497,7 @@ public class DashBoardPage extends BaseClass{
 	}
 
 	public WebElement getThismonth() {
-		return thismonth;
+		return thisMonth;
 	}
 
 	public WebElement getPreviousYear() {
@@ -704,4 +729,174 @@ public class DashBoardPage extends BaseClass{
 		 }
 	 }
 	 
+	 public void clickFilterRegion() {
+		 try {
+			 filterRegion.click();
+		 }catch (Exception e ) {
+			 System.out.println("not able to click");
+		 }
+	 }
+	 
+	 public void scrollToRegion() {
+		 try {
+			 driverutility.scrollToElement(filterRegion);
+		 }catch (Exception e ) {
+			 driverutility.scrollToElement(filterRegion);
+		 }
+	 }
+	 
+	 public void clickOnRegionName() {
+		 try {
+			 regionName.click();
+		 }catch (Exception e ) {
+			 System.out.println("not able to click");
+		 }
+	 }
+	 
+	 public void clickOnCustomDateRange() {
+		 try {
+			 filterCustomDateRange.click();
+		 }catch (Exception e ) {
+			 System.out.println("not able to click");
+		 }
+	 }
+	 public void clickOnToDateRadioButton() {
+		 try {
+			 toRadioButton.click();
+		 }catch (Exception e ) {
+			 System.out.println("not able to click");
+		 }
+	 }
+	 public void clickOnYearDropDown() {
+		 try {
+			 yearDropDown.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click");
+		 }
+	 }
+	 public void clickOnYear2024() {
+		 try {
+			 year2024.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click");
+		 }
+	 }
+	 public void clickOnFirstDateOfMonth() {
+		 try {
+			 firstDayOfMonth.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click");
+		 }
+	 }
+	 
+	 public void clickOnFifthDayOfMonth() {
+		 try {
+			 fifthDayOfMonth.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click");
+		 }
+	 }
+	 
+	 public void clickOnCloseButton() {
+		 try {
+			 closeButton.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click");
+		 }
+	 }
+	 public void clickOnResetButton() {
+		try{
+			 ResetButton.click();
+		}catch(Exception e) {
+			 System.out.println("Not able to click on ResetButton");
+		 }
+	 }
+	 
+	 public void assertsearchTitle() {
+		 try {
+			 assertTrue(searchTitle.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("searchTitle did not displayed");
+		 }
+	 }
+	 public void clickOnToday() {
+		 try {
+			 today.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on today");
+		 }
+	 }
+	 public void clickOnThisYear() {
+		 try {
+			 thisYear.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on thisYear");
+		 }
+	 }
+	 public void clickOnThisMonth() {
+		 try {
+			 thisMonth.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on thisMonth");
+		 }
+	 }
+	 public void clickOnPreiodPreviousYear() {
+		 try {
+			 previousYear.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on previousYear");
+		 }
+	 }
+	 
+	 public void clickOnDashboardPeriodDropDown() {
+		 try {
+			 dashboardPeriodDropDown.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on dashboardPeriodDropDown");
+		 }
+	 }
+	 public void clickOnScanTypeDownArrow() {
+		 try {
+			 scanTypeDownArrow.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on scanTypeDownArrow");
+		 }
+	 }
+	 
+	 public void clickOnScanTypeWeight() {
+		 try {
+			 scanTypeWeight.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on scanTypeWeight");
+		 }
+	 }
+	 public void clickOnProductAllButton() {
+		 try {
+			 driverutility.WaitToClick(0, productAll);
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on productAll");
+		 }
+	 }
+	 
+	 public void clickOnScanTypeShipper() {
+		 try {
+			 scanTypeShipper.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on scanTypeShipper");
+		 }
+	 }
+	 public void assertTopProductAllButton() {
+		 try {
+			 assertTrue(TopProductAllButton.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("TopProductAllButton not diplayed");
+		 }
+	 }
+	 public void clickOnScanTypeValue() {
+		 try {
+			 scanTypeValue.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on scanTypeValue");
+		 }
+	 }
 }

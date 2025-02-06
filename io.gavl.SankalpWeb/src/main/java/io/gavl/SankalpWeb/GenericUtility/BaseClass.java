@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 
 import ObjectRepository.DashBoardPage;
 import ObjectRepository.LoginPage;
+import ObjectRepository.ScanPage;
+import ObjectRepository.SideMenuPage;
 import ObjectRepository.ChangePasswordPage;
 
 public class BaseClass {
@@ -18,6 +20,8 @@ public class BaseClass {
 	public static ChangePasswordPage changeppasswordpage;
 	public static Driverutility driverutility;
 	public static FileUtility fileUtility;
+	public static SideMenuPage sideMenuPage;
+	public static ScanPage  scanPage;
 	@BeforeClass
 	public void Login() {
 		 driver=new ChromeDriver();
@@ -32,6 +36,8 @@ public class BaseClass {
 		changeppasswordpage= new ChangePasswordPage(driver);
 		driverutility=new Driverutility();
 		fileUtility= new FileUtility();
+		sideMenuPage=new SideMenuPage(driver);
+		scanPage=new ScanPage(driver);
 	}
 	
 }

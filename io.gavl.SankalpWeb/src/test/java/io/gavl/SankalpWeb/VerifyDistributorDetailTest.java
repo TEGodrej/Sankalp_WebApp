@@ -11,9 +11,9 @@ public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetails() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+//		String userName=FileUtility.getProperty("UserName");
+//		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin("demouser","demouser");
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String distributorId="2019378";
@@ -33,7 +33,9 @@ public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetailsByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.userlogin("demouser", "demouser");
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String distributorName="AARAV KRUSHI SEVA KENDRA";

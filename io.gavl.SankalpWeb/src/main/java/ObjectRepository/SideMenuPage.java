@@ -76,6 +76,12 @@ public class SideMenuPage {
 	public WebElement getReturnsTab() {
 		return returnsTab;
 	}
-	
+	public void clickOnScan() {
+		try {
+			scanTab.click();
+		}catch(Exception e) {
+			System.out.println("Not able to click");
+		}
+	}
 	
 }

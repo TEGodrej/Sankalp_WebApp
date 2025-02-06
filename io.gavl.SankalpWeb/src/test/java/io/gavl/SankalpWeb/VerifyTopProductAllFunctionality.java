@@ -8,15 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyTopProductAllFunctionality extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToSeeTodayPeriodThroughAllSelect() {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -33,11 +34,7 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 		WebElement allTab=dashboardpage.getProductAll();
 		driverutility.WaitToClick(5, allTab);
 		allTab.click();
-//		WebElement table=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()='Product group']"));
 		WebElement prodName=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
-//		if(table.isDisplayed()) {
-//			assertTrue(true);
-//		}
 		driverutility.WaitTovisibility(prodName, 10);
 		 if(!prodName.isDisplayed()) {
 			assertTrue(false);
@@ -46,13 +43,12 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 			assertTrue(true);
 		}
 	}
-//	(//div[@class='scMLVInnerTableDetailContent' and contains(.,'No details found.')])[1]
 	
 	@Test
 	public void verifyUserAbleToSeeThisMonthPeriodThroughAllselect() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		
@@ -66,26 +62,16 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 		}catch(ElementClickInterceptedException e) {
 			dashboardpage.getThismonth().click();
 		}
-//		WebElement allTab=dbp.getProductAll();
-//		dutil.WaitToClick(5, allTab);
-//		allTab.click();
-//		WebElement table=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
-//		WebElement prodName=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']"));
 
 		String pesticide= driver.findElement(By.xpath("//strong[text()='GAVL HITWEED MAXX LIQUID']")).getText();
 		System.out.println(pesticide);
-//		if(prodName.isDisplayed()) {
-//			assertTrue(true);
-//		}else {
-//			assertTrue(false, "Table did not displayed: Case Fails");
-//		}
 	}
 	
 	@Test
 	public void verifyUserAbleToSeeThisYearPeriodThroughAllselect() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -109,9 +95,9 @@ public class VerifyTopProductAllFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyUserAbleToSeePreviousYearPeriodThroughAllselect() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		dashboardpage.getProductAll().click();
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));

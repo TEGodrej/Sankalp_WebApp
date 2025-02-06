@@ -3,13 +3,16 @@ package io.gavl.SankalpWeb;
 import java.time.Duration;
 import org.testng.annotations.Test;
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyTerritoryDetailTest extends BaseClass{
 
 	@Test
 	public void verifyTerritoryDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.userlogin("demouser", "demouser");
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String TerritoryName="Amravati";
@@ -27,7 +30,9 @@ public class VerifyTerritoryDetailTest extends BaseClass{
 	@Test
 	public void verifyTerritoryDetailByCode() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.userlogin("demouser", "demouser");
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String TerritoryCode="D96";

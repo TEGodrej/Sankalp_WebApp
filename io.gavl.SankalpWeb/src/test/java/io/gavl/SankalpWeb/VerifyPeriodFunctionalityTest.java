@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 /*
  * @ author testing.engineer
  */
@@ -16,9 +17,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 
 	@Test
 	public void verifyUserAbleToViewPeriodWithThisMonthOption() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -45,9 +46,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithThisYearOption() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -74,9 +75,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithPreviousYearOption() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();
@@ -101,9 +102,9 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToViewPeriodWithTodayOption() {
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 		WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 		period.click();

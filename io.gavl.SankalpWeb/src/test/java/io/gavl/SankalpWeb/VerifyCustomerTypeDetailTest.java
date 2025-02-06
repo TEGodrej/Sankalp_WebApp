@@ -8,15 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
+import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyCustomerTypeDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyCustomerTypeAsDistributor() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
@@ -37,9 +38,9 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	@Test
 	public void verifyCustomerTypeAsRetaier() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		loginpage.getUsernameTextField().sendKeys("demouser");
-		loginpage.getPasswordTextField().sendKeys("demouser");
-		loginpage.getLoginButton().click();
+		String userName=FileUtility.getProperty("UserName");
+		String password=FileUtility.getProperty("Password");
+		loginpage.userlogin(userName,password);
 		try {
 			dashboardpage.getFilterOptiopn().click();
 		}catch(ElementNotInteractableException e) {
