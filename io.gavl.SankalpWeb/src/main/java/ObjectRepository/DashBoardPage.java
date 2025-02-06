@@ -117,13 +117,13 @@ public class DashBoardPage extends BaseClass{
 	@FindBy(xpath = "//span[text()='All']")
 	private WebElement custAll;
 	
-	@FindBy(xpath = "//span[text()=' Retailer ']")
+	@FindBy(xpath = "//span[text()='Retailer']")
 	private WebElement retailer;
 	
-	@FindBy(xpath = "//span[text()=' Distributor ']")
+	@FindBy(xpath = "//span[text()='Distributor']")
 	private WebElement distibutor;
 	
-	@FindBy(xpath = "//span[text()=' PD ']")
+	@FindBy(xpath = "//span[text()='PD']")
 	private WebElement pd;
 	
 	@FindBy(xpath = "(//a[text()='XLSX'])[1]")
@@ -262,14 +262,35 @@ public class DashBoardPage extends BaseClass{
 	@FindBy(xpath = "//label[text()=' Search ']")
 	private WebElement searchTitle;
 	
-	@FindBy(xpath = "//*[name()='svg' and contains(@class, 'ng-tns-c56-16')]")
+	@FindBy(xpath = "//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]")
 	private WebElement dashboardPeriodDropDown;
 	
 	@FindBy(xpath = "//div[@class='scMLVInnerTableDetailContent']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']")
 	private WebElement TopProductAllButton;
 	
 	@FindBy(xpath = "//span[text()='Dashboard']")
-	private WebElement dashBoarTitle;
+	private WebElement dashBoardTitle;
+	
+	@FindBy(xpath = "//div[@id='dvTopPlacementPerformersChart']")
+	private WebElement topPerformersChart;
+	
+	@FindBy(xpath = "//h5[text()='Top performers - Liquidation']")
+	private WebElement topPerformerLiquidation;
+	
+	@FindBy(xpath = "//div[@id='dvTopPerformersChart']")
+	private WebElement topPerformerLiquidationChart;
+	
+	@FindBy(xpath = "//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']/descendant::div[text()=' GAVL HITWEED MAXX LIQUID']")
+	private WebElement productNameTable;
+	
+	@FindBy(xpath = "//strong[text()='GAVL HITWEED MAXX LIQUID']")
+	private WebElement pesticideName;
+	
+	@FindBy(xpath = "//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']")
+	private WebElement topProductTable;
+	
+	@FindBy(xpath = "(//div[@class='scCMFullWDHT d-block'])[1]")
+	private WebElement productGraph;
 	
 	public WebElement getRegionName() {
 		return regionName;
@@ -855,13 +876,14 @@ public class DashBoardPage extends BaseClass{
 		 try {
 			 dashboardPeriodDropDown.click();
 		 }catch(Exception e) {
-			 System.out.println("Not able to click on dashboardPeriodDropDown");
+			 dashboardPeriodDropDown.click();
 		 }
 	 }
 	 public void clickOnScanTypeDownArrow() {
 		 try {
 			 scanTypeDownArrow.click();
 		 }catch(Exception e) {
+			 scanTypeDownArrow.click();
 			 System.out.println("Not able to click on scanTypeDownArrow");
 		 }
 	 }
@@ -875,7 +897,7 @@ public class DashBoardPage extends BaseClass{
 	 }
 	 public void clickOnProductAllButton() {
 		 try {
-			 driverutility.WaitToClick(0, productAll);
+			 driverutility.WaitToClick(3, productAll);
 		 }catch(Exception e) {
 			 System.out.println("Not able to click on productAll");
 		 }
@@ -902,9 +924,9 @@ public class DashBoardPage extends BaseClass{
 			 System.out.println("Not able to click on scanTypeValue");
 		 }
 	 }
-	 public void assertDashBoarTitle() {
+	 public void verifyDashBoardTitle() {
 		 try {
-			 dashBoarTitle.click();
+			 assertTrue(dashBoardTitle.isDisplayed());
 		 }catch(Exception e) {
 			 System.out.println("Not able to assert on dashBoarTitle");
 		 }
@@ -920,7 +942,92 @@ public class DashBoardPage extends BaseClass{
 		 try {
 			 retailerName.click();
 		 }catch(Exception e) {
-			 System.out.println("Not able to assert on dashBoarTitle");
+			 System.out.println("Not able to click on retailer Name");
+		 }
+	 }
+	 public void verifyTopPerformersChart() {
+		 try {
+			 assertTrue(topPerformersChart.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println(topPerformersChart +" did not displayed");
+		 }
+	 }
+	 public void clickOnFilterCustomerType() {
+		 try {
+			 filterCustomerType.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on filter Customer Type");
+		 }
+	 }
+	 public void clickOnCustomerTypeRetailer() {
+		 try {
+			 retailer.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on retailer");
+		 }
+	 }
+	 public void clickOnCustomerTypeDistributor() {
+		 try {
+			 distibutor.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on distibutor");
+		 }
+	 }
+	 public void clickOnCustomerTypePD() {
+		 try {
+			 pd.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on PD");
+		 }
+	 }
+	 public void scrollToTopPerformerLiquidationText() {
+		 try {
+			 driverutility.scrollToElement(topPerformerLiquidation);
+		 }catch(Exception e) {
+			 System.out.println("Not able to scroll upto "+topPerformerLiquidation);
+		 }
+	 }
+	 public void verifyTopPerformerLiquidationChart() {
+		 try {
+			 assertTrue(topPerformerLiquidationChart.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("Top Performer Chart is not found");
+		 }
+	 }
+	 
+	 public void verifyProductNameTable() {
+		 try {
+			 assertTrue(productNameTable.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("Product Name is not visible");
+		 }
+	 }
+	 public void clickOnProductAllTab() {
+		 try {
+			 productAll.click();
+		 }catch(Exception e) {
+			 
+		 }
+	 }
+	 public void verifyPesticideName() {
+		 try {
+			 assertTrue(pesticideName.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on pesticide name");
+		 }
+	 }
+	 public void clickOnTopProductTable() {
+		 try {
+			assertTrue(topProductTable.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on ");
+		 }
+	 }
+	 public void verifyProductGraph() {
+		 try {
+			 assertTrue(productGraph.isDisplayed());
+		 }catch(Exception e) {
+			 System.out.println("Product Graph is not displayed");
 		 }
 	 }
 }

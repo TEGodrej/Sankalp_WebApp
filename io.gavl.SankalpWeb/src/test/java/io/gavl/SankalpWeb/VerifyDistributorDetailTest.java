@@ -5,15 +5,12 @@ import java.time.Duration;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetails() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-//		String userName=FileUtility.getProperty("UserName");
-//		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin("demouser","demouser");
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String distributorId="2019378";
@@ -33,9 +30,7 @@ public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetailsByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String distributorName="AARAV KRUSHI SEVA KENDRA";

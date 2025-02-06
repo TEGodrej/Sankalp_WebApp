@@ -1,93 +1,37 @@
 package io.gavl.SankalpWeb;
 
-import static org.testng.Assert.assertTrue;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 /*
  * @author Testing Engineer
  */
 public class VerifyFilterFunctionalityTest extends BaseClass{
 
 	@Test
-	public void verifyUserAbleToFecthDistributor()   {
-		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
-		try {
-		dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
-		dashboardpage.getfilterCustomerType().click();
-		dashboardpage.getFilterSearchBox().sendKeys("Retailer");
-		
-		dashboardpage.getApplyButton().click();
-		
-		WebElement chart=driver.findElement(By.xpath("(//canvas[@class='am5-layer-30'])[1]"));
-		if(chart.isDisplayed()) {
-			assertTrue(true);
-		}else {
-			assertTrue(false, "Chart did not displayed:Case Fails");
-		}
-	}
-	
-	@Test
 	public void verifyUserAbleToFetchRetailerDetails() {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
-		dashboardpage.getfilterRetailer().click();
-		dashboardpage.getFilterSearchBox().sendKeys("Testing kiran store");
-		dashboardpage.getApplyButton().click();
-		WebElement TPliquid=driver.findElement(By.xpath("//h5[text()='Top performers - Liquidation']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", TPliquid);
-		
-		WebElement chart=driver.findElement(By.xpath("//div[@id='dvTopPerformersChart']"));
-		if(chart.isDisplayed()) {
-			assertTrue(true);
-		}else {
-			assertTrue(false, "no chart dispalyed: Case Fails");
-			}
+		loginpage.userlogin();
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnFilterRetailer();
+		String retailerName="Testing kiran store";
+		dashboardpage.sendKeyToSearchBox(retailerName);
+		dashboardpage.clickOnApplyButton();
+		dashboardpage.scrollToTopPerformerLiquidationText();
+		driverutility.threadWait(3);
+		dashboardpage.verifyTopPerformerLiquidationChart();
 	}
 	
 	@Test
 	public void verifyUserAbleTofetchRetailerDetailsUsingCode() {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
-		try {
-			dashboardpage.getFilterOptiopn().click();
-		}catch(ElementNotInteractableException e) {
-			dashboardpage.getFilterOptiopn().click();
-		}
-		dashboardpage.getfilterRetailer().click();
-		dashboardpage.getFilterSearchBox().sendKeys("7517658");
-		dashboardpage.getApplyButton().click();
-		WebElement TPliquid=driver.findElement(By.xpath("//h5[text()='Top performers - Liquidation']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", TPliquid);
-		
-		WebElement chart=driver.findElement(By.xpath("//div[@id='dvTopPerformersChart']"));
-		if(chart.isDisplayed()) {
-			assertTrue(true);
-		}else {
-			assertTrue(false, "no chart dispalyed: Case Fails");
-			}
+		loginpage.userlogin();
+		dashboardpage.clickOnFilterOption();
+		dashboardpage.clickOnFilterRetailer();
+		String retailerId="7517658";
+		dashboardpage.sendKeyToSearchBox(retailerId);
+		dashboardpage.clickOnApplyButton();
+		dashboardpage.scrollToTopPerformerLiquidationText();
+		driverutility.threadWait(3);
+		dashboardpage.verifyTopPerformerLiquidationChart();
 	}
 }
 

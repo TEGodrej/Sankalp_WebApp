@@ -1,7 +1,5 @@
 package io.gavl.SankalpWeb;
 
-import static org.testng.Assert.assertTrue;
-
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -10,43 +8,38 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyTopProductTest extends BaseClass {
 
 	
 	@Test
 	public void verifyTop10Functionality() {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
-        WebElement ProductsGraph=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
-		if(ProductsGraph.isDisplayed()) {
-			assertTrue(true);
-		}else {
-			assertTrue(false, "Top 10 button is not selected");
-		}
+		loginpage.userlogin();
+//        WebElement ProductsGraph=driver.findElement(By.xpath("(//div[@class='scCMFullWDHT d-block'])[1]"));
+//		if(ProductsGraph.isDisplayed()) {
+//			assertTrue(true);
+//		}else {
+//			assertTrue(false, "Top 10 button is not selected");
+//		}
+		dashboardpage.verifyProductGraph();
 	}
 	
 	@Test
 	public void verifyAllFunctionality() {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.getProductAll().click();
-		WebElement ProductAll=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
-		if(ProductAll.isDisplayed()) {
-			assertTrue(true);
-		}else {
-			assertTrue(false, "Product did not displayed: Case fails");
-		}
+//		WebElement ProductAll=driver.findElement(By.xpath("//div[@class='scCMFullWDHT scScrollbar scDBGridContainer d-block ng-star-inserted']"));
+//		if(ProductAll.isDisplayed()) {
+//			assertTrue(true);
+//		}else {
+//			assertTrue(false, "Product did not displayed: Case fails");
+//		}
+		dashboardpage.verifyProductNameTable();
 	}
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsValue() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -79,9 +72,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -114,9 +105,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -149,9 +138,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -185,9 +172,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -221,9 +206,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsValue() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -257,9 +240,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -293,9 +274,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -329,9 +308,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsValue() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -365,9 +342,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -401,9 +376,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -436,9 +409,7 @@ public class VerifyTopProductTest extends BaseClass {
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
@@ -471,9 +442,7 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -505,9 +474,7 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -539,9 +506,7 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();
@@ -573,9 +538,7 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		try {
 			WebElement period=driver.findElement(By.xpath("//*[name()='svg' and contains(@class, 'ng-tns-c56-5')]"));
 			period.click();

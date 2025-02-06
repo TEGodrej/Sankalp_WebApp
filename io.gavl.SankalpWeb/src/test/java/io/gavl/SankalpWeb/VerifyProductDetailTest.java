@@ -5,16 +5,13 @@ import java.time.Duration;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyProductDetailTest extends BaseClass{
 
 	@Test
 	public void verifyProductDetailByName() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String pdId="28100002";
@@ -31,9 +28,7 @@ public class VerifyProductDetailTest extends BaseClass{
 	@Test
 	public void verifyProductDetailByCode() throws InterruptedException {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String pdId="VIKAS ORGANIC MANURE 50 KG";

@@ -43,6 +43,13 @@ public class Driverutility extends BaseClass{
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-
+	}
+	
+	public void threadWait(int time) {
+		try {
+			Thread.sleep(Duration.ofSeconds(time));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

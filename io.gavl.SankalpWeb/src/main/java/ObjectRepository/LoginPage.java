@@ -1,17 +1,14 @@
 package ObjectRepository;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.aventstack.extentreports.utils.FileUtil;
-
+import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
-public class LoginPage {
+public class LoginPage extends BaseClass{
 	
 	WebDriver driver;
 	public LoginPage(WebDriver driver) {
@@ -40,15 +37,17 @@ public class LoginPage {
 		return loginButton;
 	}
 	
-		public void userlogin( String userName, String password) {
+		public void userlogin() {
 			try {
-			FileUtility.propertyFile();
-//			FileUtility.getProperty(userName);
-//			FileUtility.getProperty(password);
-//			usernameTextField.sendKeys(FileUtility.getProperty(userName));
-//			Thread.sleep(Duration.ofSeconds(2));
-//			passwordTextField.sendKeys(FileUtility.getProperty(password));
-//			loginButton.click();
+				FileUtility.propertyFile();
+				String userName=FileUtility.getProperty("UserName");
+			usernameTextField.sendKeys(userName);
+			System.out.println(userName+" has been entered as user name");
+			String password = FileUtility.getProperty("Password");
+			passwordTextField.sendKeys(password);
+			System.out.println(password+" has been entered as password");
+			
+			loginButton.click();
 		}catch(Exception e) {
 			
 		}

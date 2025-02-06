@@ -3,16 +3,13 @@ package io.gavl.SankalpWeb;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyCustomDateFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyCustomDateFunctionality() {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnCustomDateRange();
 		dashboardpage.clickOnToDateRadioButton();
@@ -25,9 +22,7 @@ public class VerifyCustomDateFunctionality extends BaseClass{
 	@Test
 	public void verifyCustomDateFunctionalityWithCloseButton() {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnCustomDateRange();
 		dashboardpage.clickOnToDateRadioButton();
@@ -40,9 +35,7 @@ public class VerifyCustomDateFunctionality extends BaseClass{
 	@Test
 	public void verifyCustomDateFunctionalityWithResetButton() {
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnCustomDateRange();
 		dashboardpage.clickOnToDateRadioButton();

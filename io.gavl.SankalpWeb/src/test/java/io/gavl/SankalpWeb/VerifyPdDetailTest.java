@@ -5,16 +5,14 @@ import java.time.Duration;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
-import io.gavl.SankalpWeb.GenericUtility.FileUtility;
 
 public class VerifyPdDetailTest extends BaseClass{
 
 	@Test
 	public void  verifyUserAbleToFetchPdDetails() throws InterruptedException{
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);		dashboardpage.clickOnFilterOption();
+		loginpage.userlogin();		
+		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String pdId="2001784";
 		Thread.sleep(Duration.ofSeconds(10));
@@ -30,9 +28,7 @@ public class VerifyPdDetailTest extends BaseClass{
 	@Test
 	public void  verifyUserAbleToFetchPdDetailsByName() throws InterruptedException{
 		driverutility.implicitlyWait(10);
-		String userName=FileUtility.getProperty("UserName");
-		String password=FileUtility.getProperty("Password");
-		loginpage.userlogin(userName,password);
+		loginpage.userlogin();
 		dashboardpage.clickOnFilterOption();
 		dashboardpage.clickOnPreviousYear();
 		String pdName="SANTOSH KRISHI SEVA KENDRA";
