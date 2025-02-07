@@ -1030,4 +1030,25 @@ public class DashBoardPage extends BaseClass{
 			 System.out.println("Product Graph is not displayed");
 		 }
 	 }
+	 public void clickOnProductDownload() {
+		 try {
+			 productDownload.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on product download button");
+		 }
+	 }
+	 public void clickOnProductJpg() {
+		 try {
+			 productJpg.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on productJpg button");
+		 }
+	 }
+	 public void clickOnProductXlsx() {
+		 try {
+			 productXlsx.click();
+		 }catch(Exception e) {
+			 System.out.println("Not able to click on product Xlsx");
+		 }
+	 }
 }
