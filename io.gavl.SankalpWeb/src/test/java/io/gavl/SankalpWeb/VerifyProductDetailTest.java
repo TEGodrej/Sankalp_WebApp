@@ -10,35 +10,35 @@ public class VerifyProductDetailTest extends BaseClass{
 
 	@Test
 	public void verifyProductDetailByName() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String pdId="28100002";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterProduct();
-		dashboardpage.sendKeyToSearchBox(pdId);
+		dashBoardPage.clickOnFilterProduct();
+		dashBoardPage.sendKeyToSearchBox(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnProductName();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnProductName();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyProductDetailByCode() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String pdId="VIKAS ORGANIC MANURE 50 KG";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterProduct();
-		dashboardpage.getFilterSearchBox().sendKeys(pdId);
+		dashBoardPage.clickOnFilterProduct();
+		dashBoardPage.getFilterSearchBox().sendKeys(pdId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnProductId();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnProductId();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 }

@@ -8,8 +8,8 @@ public class VerifyLoginFuntionalityTest extends BaseClass{
 
 	@Test
 	public void verifyuserAbleToLoginWithValidCredential() {
-		loginpage.userlogin();
-		dashboardpage.verifyDashBoardTitle();
+		loginPage.userlogin();
+		dashBoardPage.verifyDashBoardTitle();
 	
   }
 }

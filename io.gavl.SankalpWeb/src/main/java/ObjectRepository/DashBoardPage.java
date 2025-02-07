@@ -641,7 +641,7 @@ public class DashBoardPage extends BaseClass{
 	
 	public void scrollToTopPerformer() {
 		try {
-			driverutility.scrollToElement(topPerformersPlacementText);
+			driverUtility.scrollToElement(topPerformersPlacementText);
 		}catch(Exception e) {
 			System.out.println("not able to scroll");
 		}
@@ -687,7 +687,7 @@ public class DashBoardPage extends BaseClass{
 	 
 	 public void scrollToTopProductChart() {
 		 try {
-			 driverutility.scrollToElement(topProductChart);
+			 driverUtility.scrollToElement(topProductChart);
 		 }catch(Exception e) {
 				System.out.println("not able to scroll");
 			}
@@ -763,9 +763,9 @@ public class DashBoardPage extends BaseClass{
 	 
 	 public void scrollToRegion() {
 		 try {
-			 driverutility.scrollToElement(filterRegion);
+			 driverUtility.scrollToElement(filterRegion);
 		 }catch (Exception e ) {
-			 driverutility.scrollToElement(filterRegion);
+			 driverUtility.scrollToElement(filterRegion);
 		 }
 	 }
 	 
@@ -897,7 +897,7 @@ public class DashBoardPage extends BaseClass{
 	 }
 	 public void clickOnProductAllButton() {
 		 try {
-			 driverutility.WaitToClick(3, productAll);
+			 driverUtility.WaitToClick(3, productAll);
 		 }catch(Exception e) {
 			 System.out.println("Not able to click on productAll");
 		 }
@@ -982,7 +982,7 @@ public class DashBoardPage extends BaseClass{
 	 }
 	 public void scrollToTopPerformerLiquidationText() {
 		 try {
-			 driverutility.scrollToElement(topPerformerLiquidation);
+			 driverUtility.scrollToElement(topPerformerLiquidation);
 		 }catch(Exception e) {
 			 System.out.println("Not able to scroll upto "+topPerformerLiquidation);
 		 }

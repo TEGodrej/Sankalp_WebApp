@@ -10,11 +10,11 @@ public class VerifyCloseFunctionalityTest extends BaseClass{
  
 	@Test
 	public void verifyUserAbleToCloseThefilter() {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
 		
-		dashboardpage.clickOnCloseButton();
-		dashboardpage.verifyDashBoardTitle();
+		dashBoardPage.clickOnCloseButton();
+		dashBoardPage.verifyDashBoardTitle();
 	}
 }

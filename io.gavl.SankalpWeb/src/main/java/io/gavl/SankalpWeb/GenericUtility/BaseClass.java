@@ -15,10 +15,10 @@ import ObjectRepository.ChangePasswordPage;
 public class BaseClass {
 
 	public static WebDriver driver;
-	public static LoginPage loginpage;
-	public static DashBoardPage dashboardpage;
-	public static ChangePasswordPage changeppasswordpage;
-	public static Driverutility driverutility;
+	public static LoginPage loginPage;
+	public static DashBoardPage dashBoardPage;
+	public static ChangePasswordPage changePasswordPage;
+	public static Driverutility driverUtility;
 	public static FileUtility fileUtility;
 	public static SideMenuPage sideMenuPage;
 	public static ScanPage  scanPage;
@@ -31,10 +31,10 @@ public class BaseClass {
 		
 		driver.get("https://gavl.staging.uniqid.io/#/login");
 		
-		loginpage=new LoginPage(driver);
-		dashboardpage=new DashBoardPage(driver);
-		changeppasswordpage= new ChangePasswordPage(driver);
-		driverutility=new Driverutility();
+		loginPage=new LoginPage(driver);
+		dashBoardPage=new DashBoardPage(driver);
+		changePasswordPage= new ChangePasswordPage(driver);
+		driverUtility=new Driverutility();
 		fileUtility= new FileUtility();
 		sideMenuPage=new SideMenuPage(driver);
 		scanPage=new ScanPage(driver);

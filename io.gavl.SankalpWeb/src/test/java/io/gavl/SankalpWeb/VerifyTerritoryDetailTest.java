@@ -10,34 +10,34 @@ public class VerifyTerritoryDetailTest extends BaseClass{
 
 	@Test
 	public void verifyTerritoryDetailByName() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String TerritoryName="Amravati";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterTerritory();
-		dashboardpage.sendKeyToSearchBox(TerritoryName);
+		dashBoardPage.clickOnFilterTerritory();
+		dashBoardPage.sendKeyToSearchBox(TerritoryName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnTerritoryName();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnTerritoryName();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 		
 	}
 	
 	@Test
 	public void verifyTerritoryDetailByCode() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String TerritoryCode="D96";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterTerritory();
-		dashboardpage.sendKeyToSearchBox(TerritoryCode);
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnFilterTerritory();
+		dashBoardPage.sendKeyToSearchBox(TerritoryCode);
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 }

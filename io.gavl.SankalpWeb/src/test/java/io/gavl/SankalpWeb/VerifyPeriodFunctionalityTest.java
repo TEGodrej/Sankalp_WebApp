@@ -11,35 +11,35 @@ public class VerifyPeriodFunctionalityTest extends BaseClass {
 
 	@Test
 	public void verifyUserAbleToViewPeriodWithThisMonthOption() {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisMonth();
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisMonth();
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithThisYearOption() {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.assertTopProduct();
 		
 	}
 	
 	@Test
 	public void verifyUserAbleToViewPeroidWithPreviousYearOption() {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnPreviousYear();
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnPreviousYear();
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyUserAbleToViewPeriodWithTodayOption() {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.assertTopProduct();
 		
 	}
 	

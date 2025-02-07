@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 
-public class VerifyScanFunctionality extends BaseClass{
+public class VerifyScanFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyScanFunctionalityWithPeriodAsToday() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		Thread.sleep(Duration.ofSeconds(10));
 		sideMenuPage.clickOnScan();
 		scanPage.clickOnLiquidationTab();
@@ -24,8 +24,8 @@ public class VerifyScanFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyScanFunctionalityWithPeriodAsThisMonth() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		Thread.sleep(Duration.ofSeconds(10));
 		sideMenuPage.clickOnScan();
 		scanPage.clickOnLiquidationTab();
@@ -38,8 +38,8 @@ public class VerifyScanFunctionality extends BaseClass{
 	
 	@Test
 	public void verifyScanFunctionalityWithPeriodAsThisYear() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		Thread.sleep(Duration.ofSeconds(10));
 		sideMenuPage.clickOnScan();
 		scanPage.clickOnLiquidationTab();
@@ -52,8 +52,8 @@ public class VerifyScanFunctionality extends BaseClass{
 	}
 	@Test
 	public void verifyScanFunctionalityWithPeriodAsPreviousYear() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		Thread.sleep(Duration.ofSeconds(10));
 		sideMenuPage.clickOnScan();
 		scanPage.clickOnLiquidationTab();

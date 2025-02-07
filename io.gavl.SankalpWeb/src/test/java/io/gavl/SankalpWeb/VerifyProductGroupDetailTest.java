@@ -10,19 +10,19 @@ public class VerifyProductGroupDetailTest extends BaseClass{
 
 	@Test
 	public void verifyProductGroupDetailByName() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String productName="MARKETING BUSHI WP POWDER";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnProductGroup();
-		dashboardpage.sendKeyToSearchBox(productName);;
+		dashBoardPage.clickOnProductGroup();
+		dashBoardPage.sendKeyToSearchBox(productName);;
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnProductGroupId();;
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnProductGroupId();;
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 
 	}
 	

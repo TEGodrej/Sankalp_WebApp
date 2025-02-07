@@ -10,35 +10,35 @@ public class VerifyPdDetailTest extends BaseClass{
 
 	@Test
 	public void  verifyUserAbleToFetchPdDetails() throws InterruptedException{
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();		
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();		
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String pdId="2001784";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterPd();
-		dashboardpage.sendKeyToSearchBox(pdId);;
+		dashBoardPage.clickOnFilterPd();
+		dashBoardPage.sendKeyToSearchBox(pdId);;
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnPdName();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnPdName();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void  verifyUserAbleToFetchPdDetailsByName() throws InterruptedException{
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String pdName="SANTOSH KRISHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfilterPD().click();
-		dashboardpage.getFilterSearchBox().sendKeys(pdName);
+		dashBoardPage.getfilterPD().click();
+		dashBoardPage.getFilterSearchBox().sendKeys(pdName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnPdId();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnPdId();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
  }
 }

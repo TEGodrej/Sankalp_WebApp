@@ -10,21 +10,21 @@ public class VerifyRetailerDetailTest extends BaseClass{
 	
 	@Test
 	public void  verifyUserAbleToFetchRetailerDetails() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
 		String retailerId="7517658";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.getfilterRetailer().click();
-		dashboardpage.clickOnFilterRetailer();
-		dashboardpage.sendKeyToSearchBox(retailerId);
+		dashBoardPage.getfilterRetailer().click();
+		dashBoardPage.clickOnFilterRetailer();
+		dashBoardPage.sendKeyToSearchBox(retailerId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterRetailer();
-		dashboardpage.clickOnRetailerName();
+		dashBoardPage.clickOnFilterRetailer();
+		dashBoardPage.clickOnRetailerName();
 		
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 
 	}
 

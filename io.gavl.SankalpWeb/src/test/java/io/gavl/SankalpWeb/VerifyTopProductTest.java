@@ -9,241 +9,241 @@ public class VerifyTopProductTest extends BaseClass {
 	
 	@Test
 	public void verifyTop10Functionality() {
-		loginpage.userlogin();
-		dashboardpage.verifyProductGraph();
+		loginPage.userlogin();
+		dashBoardPage.verifyProductGraph();
 	}
 	
 	@Test
 	public void verifyAllFunctionality() {
-		loginpage.userlogin();
-		dashboardpage.getProductAll().click();
-		dashboardpage.verifyProductNameTable();
+		loginPage.userlogin();
+		dashBoardPage.getProductAll().click();
+		dashBoardPage.verifyProductNameTable();
 	}
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsValue() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisMonth();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisMonth();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsShipper() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisMonth();
-		dashboardpage.clickOnScanTypeDownArrow();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisMonth();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisMonth();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisMonth();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsWeight() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsShipper() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfThisYearPeriodAndScanTypeAsValue() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsWeight() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnPreviousYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnPreviousYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsShipper() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfPreviousYearPeriodAndScanTypeAsValue() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnThisYear();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnThisYear();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	@Test
 	public void verifyUserAbleToDowonloadImageOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
 		
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductJpg();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductJpg();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsWeight() throws InterruptedException {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductXlsx();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductXlsx();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsShipper() throws InterruptedException {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductXlsx();
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductXlsx();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfTodayPeriodAndScanTypeAsValue() throws InterruptedException {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductXlsx();
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductXlsx();
 	}
 	
 	@Test
 	public void verifyUserAbleToDowonloadxlxsOfThisMonthPeriodAndScanTypeAsWeight() throws InterruptedException {
-		loginpage.userlogin();
-		dashboardpage.clickOnDashboardPeriodDropDown();
-		dashboardpage.clickOnToday();
-		dashboardpage.clickOnScanTypeDownArrow();
+		loginPage.userlogin();
+		dashBoardPage.clickOnDashboardPeriodDropDown();
+		dashBoardPage.clickOnToday();
+		dashBoardPage.clickOnScanTypeDownArrow();
 
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(2);
-		dashboardpage.clickOnProductDownload();
-		dashboardpage.clickOnProductXlsx();
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(2);
+		dashBoardPage.clickOnProductDownload();
+		dashBoardPage.clickOnProductXlsx();
 		
 		
 		

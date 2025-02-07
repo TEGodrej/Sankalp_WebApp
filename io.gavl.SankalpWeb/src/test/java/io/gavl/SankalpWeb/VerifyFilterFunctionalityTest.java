@@ -9,29 +9,29 @@ public class VerifyFilterFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToFetchRetailerDetails() {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterRetailer();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterRetailer();
 		String retailerName="Testing kiran store";
-		dashboardpage.sendKeyToSearchBox(retailerName);
-		dashboardpage.clickOnApplyButton();
-		dashboardpage.scrollToTopPerformerLiquidationText();
-		driverutility.threadWait(3);
-		dashboardpage.verifyTopPerformerLiquidationChart();
+		dashBoardPage.sendKeyToSearchBox(retailerName);
+		dashBoardPage.clickOnApplyButton();
+		dashBoardPage.scrollToTopPerformerLiquidationText();
+		driverUtility.threadWait(3);
+		dashBoardPage.verifyTopPerformerLiquidationChart();
 	}
 	
 	@Test
 	public void verifyUserAbleTofetchRetailerDetailsUsingCode() {
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterRetailer();
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterRetailer();
 		String retailerId="7517658";
-		dashboardpage.sendKeyToSearchBox(retailerId);
-		dashboardpage.clickOnApplyButton();
-		dashboardpage.scrollToTopPerformerLiquidationText();
-		driverutility.threadWait(3);
-		dashboardpage.verifyTopPerformerLiquidationChart();
+		dashBoardPage.sendKeyToSearchBox(retailerId);
+		dashBoardPage.clickOnApplyButton();
+		dashBoardPage.scrollToTopPerformerLiquidationText();
+		driverUtility.threadWait(3);
+		dashBoardPage.verifyTopPerformerLiquidationChart();
 	}
 }
 

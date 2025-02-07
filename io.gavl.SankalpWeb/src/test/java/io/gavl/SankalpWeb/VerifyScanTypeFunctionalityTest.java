@@ -8,34 +8,34 @@ public class VerifyScanTypeFunctionalityTest extends BaseClass{
 
 	@Test
 	public void verifyUserAbleToSeeWeightScanType() {
-		loginpage.userlogin();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeDownArrow();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeWeight();
-		driverutility.threadWait(3);
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeDownArrow();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeWeight();
+		driverUtility.threadWait(3);
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyUserAbleToSeeShipperScanType() {
-		loginpage.userlogin();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeDownArrow();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeShipper();
-		driverutility.threadWait(3);
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeDownArrow();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeShipper();
+		driverUtility.threadWait(3);
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyUserAbleToSeeValueScanType() {
-		loginpage.userlogin();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeDownArrow();
-		driverutility.threadWait(3);
-		dashboardpage.clickOnScanTypeValue();
-		driverutility.threadWait(3);
-		dashboardpage.assertTopProduct();
+		loginPage.userlogin();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeDownArrow();
+		driverUtility.threadWait(3);
+		dashBoardPage.clickOnScanTypeValue();
+		driverUtility.threadWait(3);
+		dashBoardPage.assertTopProduct();
 	}
 }

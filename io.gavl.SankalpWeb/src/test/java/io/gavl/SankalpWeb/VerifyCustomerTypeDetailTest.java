@@ -8,43 +8,43 @@ public class VerifyCustomerTypeDetailTest extends BaseClass{
 	
 	@Test
 	public void verifyCustomerTypeAsDistributor() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterCustomerType();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterCustomerType();
 		
-		dashboardpage.clickOnCustomerTypeDistributor();
-		dashboardpage.clickOnApplyButton();
-		dashboardpage.scrollToTopPerformer();
+		dashBoardPage.clickOnCustomerTypeDistributor();
+		dashBoardPage.clickOnApplyButton();
+		dashBoardPage.scrollToTopPerformer();
 		
-		dashboardpage.verifyTopPerformersChart();
+		dashBoardPage.verifyTopPerformersChart();
 	}
 	
 	@Test
 	public void verifyCustomerTypeAsRetaier() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterCustomerType();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterCustomerType();
 		
-		dashboardpage.clickOnCustomerTypeRetailer();
-		dashboardpage.getApplyButton().click();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnCustomerTypeRetailer();
+		dashBoardPage.getApplyButton().click();
+		dashBoardPage.clickOnApplyButton();
 		
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 	
 	@Test
 	public void verifyCustomerTypeAsPD() {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterCustomerType();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterCustomerType();
 		
-		dashboardpage.clickOnCustomerTypePD();
-		dashboardpage.getApplyButton().click();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnCustomerTypePD();
+		dashBoardPage.getApplyButton().click();
+		dashBoardPage.clickOnApplyButton();
 		
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 	}
 }

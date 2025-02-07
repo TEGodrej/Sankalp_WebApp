@@ -10,36 +10,36 @@ public class VerifyRegionDetailTest extends BaseClass{
 
 	@Test
 	public void verifyRegionDetailByName() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String regionName="Nagpur";
-		dashboardpage.scrollToRegion();
-		dashboardpage.clickFilterRegion();
-		dashboardpage.sendKeyToSearchBox(regionName);
-		driverutility.threadWait(10);
-		dashboardpage.clickOnRegionName();
+		dashBoardPage.scrollToRegion();
+		dashBoardPage.clickFilterRegion();
+		dashBoardPage.sendKeyToSearchBox(regionName);
+		driverUtility.threadWait(10);
+		dashBoardPage.clickOnRegionName();
 		
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.assertTopProduct();
+		dashBoardPage.assertTopProduct();
 		
 	}
 	
 	@Test
 	public void verifyRegionDetailByCode() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String regionCode="F26";
-		dashboardpage.scrollToRegion();
-		dashboardpage.clickFilterRegion();
-		dashboardpage.sendKeyToSearchBox(regionCode);
+		dashBoardPage.scrollToRegion();
+		dashBoardPage.clickFilterRegion();
+		dashBoardPage.sendKeyToSearchBox(regionCode);
 		
-		dashboardpage.clickOnApplyButton();
-		driverutility.threadWait(10);
-		dashboardpage.assertTopProduct();
+		dashBoardPage.clickOnApplyButton();
+		driverUtility.threadWait(10);
+		dashBoardPage.assertTopProduct();
 	}
 }

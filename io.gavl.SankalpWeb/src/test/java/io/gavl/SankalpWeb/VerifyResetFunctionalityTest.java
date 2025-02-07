@@ -10,13 +10,13 @@ public class VerifyResetFunctionalityTest extends BaseClass{
 	
 	@Test
 	public void verifyUseAbleToResetTheFilterCondition() {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnFilterRetailer();
-		dashboardpage.getFilterSearchBox().sendKeys("7517658");
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnFilterRetailer();
+		dashBoardPage.getFilterSearchBox().sendKeys("7517658");
 		
-		dashboardpage.getResetButton().click();
+		dashBoardPage.getResetButton().click();
 		
 		
 	}

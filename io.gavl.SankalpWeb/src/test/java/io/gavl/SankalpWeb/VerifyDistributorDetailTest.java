@@ -9,41 +9,41 @@ import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 public class VerifyDistributorDetailTest extends BaseClass{
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetails() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String distributorId="2019378";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterDistributor();
-		dashboardpage.sendKeyToSearchBox(distributorId);
+		dashBoardPage.clickOnFilterDistributor();
+		dashBoardPage.sendKeyToSearchBox(distributorId);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnDistributorName();
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnDistributorName();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.scrollToTopPerformer();
+		dashBoardPage.scrollToTopPerformer();
 		
-		dashboardpage.assertMessage();
+		dashBoardPage.assertMessage();
 		
 	}
 	
 	@Test
 	public void VerifyUserAbleToFetchDistributorDetailsByName() throws InterruptedException {
-		driverutility.implicitlyWait(10);
-		loginpage.userlogin();
-		dashboardpage.clickOnFilterOption();
-		dashboardpage.clickOnPreviousYear();
+		driverUtility.implicitlyWait(10);
+		loginPage.userlogin();
+		dashBoardPage.clickOnFilterOption();
+		dashBoardPage.clickOnPreviousYear();
 		String distributorName="AARAV KRUSHI SEVA KENDRA";
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnFilterDistributor();
-		dashboardpage.sendKeyToSearchBox(distributorName);
+		dashBoardPage.clickOnFilterDistributor();
+		dashBoardPage.sendKeyToSearchBox(distributorName);
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.clickOnDistributorId();
+		dashBoardPage.clickOnDistributorId();
 		
-		dashboardpage.clickOnApplyButton();
+		dashBoardPage.clickOnApplyButton();
 		Thread.sleep(Duration.ofSeconds(10));
-		dashboardpage.scrollToTopPerformer();
-		dashboardpage.assertMessage();
+		dashBoardPage.scrollToTopPerformer();
+		dashBoardPage.assertMessage();
 	}
 
 }
