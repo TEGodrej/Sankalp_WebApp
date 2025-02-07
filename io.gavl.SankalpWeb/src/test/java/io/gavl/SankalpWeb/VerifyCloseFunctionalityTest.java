@@ -6,7 +6,7 @@ import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 /*
  * @author Testing Engineer
  */
-public class VerifyCloseFunctonalityTest extends BaseClass{
+public class VerifyCloseFunctionalityTest extends BaseClass{
  
 	@Test
 	public void verifyUserAbleToCloseThefilter() {
