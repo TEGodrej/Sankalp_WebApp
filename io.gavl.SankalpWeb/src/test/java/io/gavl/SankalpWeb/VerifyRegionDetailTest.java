@@ -2,10 +2,12 @@ package io.gavl.SankalpWeb;
 
 import java.time.Duration;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 
+@Listeners(io.gavl.SankalpWeb.GenericUtility.ExtentReportsListner.class)
 public class VerifyRegionDetailTest extends BaseClass{
 
 	@Test

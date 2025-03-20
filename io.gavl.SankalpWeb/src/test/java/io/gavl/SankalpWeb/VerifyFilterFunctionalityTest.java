@@ -1,10 +1,13 @@
 package io.gavl.SankalpWeb;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import io.gavl.SankalpWeb.GenericUtility.BaseClass;
 /*
  * @author Testing Engineer
  */
+
+@Listeners(io.gavl.SankalpWeb.GenericUtility.ExtentReportsListner.class)
 public class VerifyFilterFunctionalityTest extends BaseClass{
 
 	@Test
